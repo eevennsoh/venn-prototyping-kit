@@ -1,80 +1,89 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
-  "items": [
-    {
-      "name": "hello-world",
-      "type": "registry:component",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "registryDependencies": ["button"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "example-form",
-      "type": "registry:component",
-      "title": "Example Form",
-      "description": "A contact form with Zod validation.",
-      "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/example-form/example-form.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "complex-component",
-      "type": "registry:component",
-      "title": "Complex Component",
-      "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/complex-component/page.tsx",
-          "type": "registry:page",
-          "target": "app/pokemon/page.tsx"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-image.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/lib/pokemon.ts",
-          "type": "registry:lib"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/hooks/use-pokemon.ts",
-          "type": "registry:hook"
-        }
-      ]
-    },
-    {
-      "name": "example-with-css",
-      "type": "registry:component",
-      "title": "Example with CSS",
-      "description": "A login form with a CSS file.",
-      "files": [
-        {
-          "path": "registry/new-york/blocks/example-with-css/example-card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/example-with-css/example-card.css",
-          "type": "registry:component"
-        }
-      ]
-    }
-  ]
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "venn-prototyping-kit",
+	"homepage": "https://registry-test-three.vercel.app",
+	"items": [
+		{
+			"name": "setup",
+			"type": "registry:block",
+			"title": "Prototype Starter Kit",
+			"description": "A blank application with all brand components and code",
+			"registryDependencies": [
+				"https://registry-test-three.vercel.app/r/instructions.json",
+				"https://registry-test-three.vercel.app/r/theme.json",
+				"https://registry-test-three.vercel.app/r/icon-wrapper.json",
+				"https://registry-test-three.vercel.app/r/tokens-mapping.json"
+			],
+			"files": [
+				{
+					"path": "registry/ads/blocks/setup/setup-layout.tsx",
+					"type": "registry:file",
+					"target": "app/layout.tsx"
+				},
+				{
+					"path": "registry/ads/blocks/setup/setup-page.tsx",
+					"type": "registry:page",
+					"target": "app/page.tsx"
+				}
+			]
+		},
+		{
+			"name": "theme",
+			"type": "registry:theme",
+			"title": "Global Theme",
+			"description": "Brand themed styles using Tailwind and Shadcn/ui",
+			"files": [
+				{
+					"path": "registry/ads/tokens.css",
+					"type": "registry:file",
+					"target": "app/tokens.css"
+				},
+				{
+					"path": "registry/ads/globals.css",
+					"type": "registry:file",
+					"target": "app/globals.css"
+				}
+			]
+		},
+		{
+			"name": "icon-wrapper",
+			"type": "registry:component",
+			"title": "Icon Wrapper for Atlassian Design System Icons",
+			"description": "A wrapper component for icons",
+			"dependencies": ["@atlaskit/icon/core"],
+			"registryDependencies": ["dropdown-menu", "button", "avatar", "https://registry-test-three.vercel.app/r/theme.json"],
+			"files": [
+				{
+					"path": "registry/ads/blocks/setup/components/icons/icon-wrapper.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "instructions",
+			"type": "registry:file",
+			"title": "Instructions",
+			"description": "Instructions for the application",
+			"files": [
+				{
+					"path": "registry/ads/instructions.md",
+					"type": "registry:file",
+					"target": "app/knowledge/instructions.md"
+				}
+			]
+		},
+		{
+			"name": "tokens-mapping",
+			"type": "registry:file",
+			"title": "Tokens Mapping",
+			"description": "Full list of Atlassian Design System design tokens and their corresponding Tailwind classes.",
+			"files": [
+				{
+					"path": "registry/ads/tokens-mapping.md",
+					"type": "registry:file",
+					"target": "app/knowledge/tokens-mapping.md"
+				}
+			]
+		}
+	]
 }

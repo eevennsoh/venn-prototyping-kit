@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-wrapper",
+  "type": "registry:component",
+  "title": "Icon Wrapper for Atlassian Design System Icons",
+  "description": "A wrapper component for icons",
+  "dependencies": [
+    "@atlaskit/icon/core"
+  ],
+  "registryDependencies": [
+    "dropdown-menu",
+    "button",
+    "avatar",
+    "https://registry-test-three.vercel.app/r/theme.json"
+  ],
+  "files": [
+    {
+      "path": "registry/ads/blocks/setup/components/icons/icon-wrapper.tsx",
+      "content": "import type { ComponentType } from 'react';\n\ninterface IconProps {\n  className?: string;\n  size?: 'small' | 'medium';\n  // Added minWidth and minHeight as optional props\n  minWidth?: number;\n  minHeight?: number;\n}\n\ninterface AtlaskitIconProps {\n  size?: 'small' | 'medium';\n  color?: string;\n}\n\nexport function IconWrapper<T extends AtlaskitIconProps>(\n  IconComponent: ComponentType<T>\n) {\n  return function WrappedIcon({\n    className = 'w-5 h-5',\n    size = 'medium',\n    minWidth,\n    minHeight,\n    ...iconProps\n  }: IconProps & T) {\n    // Set defaults based on size if not explicitly provided\n    const defaultMinWidth = minWidth ?? (size === 'small' ? 12 : 16);\n    const defaultMinHeight = minHeight ?? (size === 'small' ? 12 : 16);\n\n    return (\n      <div className={`flex items-center justify-center ${className}`}>\n        {/* Use the calculated min dimensions */}\n        <div\n          style={{\n            width: `${defaultMinWidth}px`,\n            height: `${defaultMinHeight}px`,\n          }}\n        >\n          <IconComponent\n            size={size}\n            color=\"currentColor\"\n            {...(iconProps as T)}\n          />\n        </div>\n      </div>\n    );\n  };\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "setup",
+  "type": "registry:block",
+  "title": "Prototype Starter Kit",
+  "description": "A blank application with all brand components and code",
+  "registryDependencies": [
+    "https://registry-test-three.vercel.app/r/instructions.json",
+    "https://registry-test-three.vercel.app/r/theme.json",
+    "https://registry-test-three.vercel.app/r/icon-wrapper.json",
+    "https://registry-test-three.vercel.app/r/tokens-mapping.json"
+  ],
+  "files": [
+    {
+      "path": "registry/ads/blocks/setup/setup-layout.tsx",
+      "content": "import type { Metadata } from \"next\";\n\nimport \"./tokens.css\";\nimport \"./globals.css\";\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\">\n      <body className=\"flex min-h-screen items-center justify-center bg-white font-sans antialiased dark:bg-black\">{children}</body>\n    </html>\n  );\n}\n",
+      "type": "registry:file",
+      "target": "app/layout.tsx"
+    },
+    {
+      "path": "registry/ads/blocks/setup/setup-page.tsx",
+      "content": "export default function SetupPage() {\n  return (\n    <div className=\"flex h-full items-center justify-center\">\n      <h1 className=\"dark:text-dark-slate-900 text-2xl font-bold text-slate-900\">Open in v0 and start prompting</h1>\n    </div>\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/page.tsx"
+    }
+  ]
+}

@@ -165,14 +165,14 @@
   --color-slate-400a: var(--ds-neutral500a); /* Light mode: neutral500a, Dark mode: darkneutral500a */
 
   /* Custom Slate Base Alpha Tailwind Tokens (Dark Mode) */
-  --color-dark-slate-minus-50a: var(--ds-darkneutralminus100a); /* Dark mode: darkneutralminus100a, Light mode: neutralminus100a  */
-  --color-dark-slate-50a: var(--ds-darkneutral100a); /* Dark mode: darkneutral100a, Light mode: neutral100a */
-  --color-dark-slate-100a: var(--ds-darkneutral200a); /* Dark mode: darkneutral200a, Light mode: neutral200a */
-  --color-dark-slate-150a: var(--ds-darkneutral250a); /* Dark mode: darkneutral250a, Light mode: neutral250a */
-  --color-dark-slate-200a: var(--ds-darkneutral300a); /* Dark mode: darkneutral300a, Light mode: neutral300a */
-  --color-dark-slate-250a: var(--ds-darkneutral350a); /* Dark mode: darkneutral350a, Light mode: neutral350a */
-  --color-dark-slate-300a: var(--ds-darkneutral400a); /* Dark mode: darkneutral400a, Light mode: neutral400a */
-  --color-dark-slate-400a: var(--ds-darkneutral500a); /* Dark mode: darkneutral500a, Light mode: neutral500a */
+  --color-slate-minus-50a: var(--ds-darkneutralminus100a); /* Dark mode: darkneutralminus100a, Light mode: neutralminus100a  */
+  --color-slate-50a: var(--ds-darkneutral100a); /* Dark mode: darkneutral100a, Light mode: neutral100a */
+  --color-slate-100a: var(--ds-darkneutral200a); /* Dark mode: darkneutral200a, Light mode: neutral200a */
+  --color-slate-150a: var(--ds-darkneutral250a); /* Dark mode: darkneutral250a, Light mode: neutral250a */
+  --color-slate-200a: var(--ds-darkneutral300a); /* Dark mode: darkneutral300a, Light mode: neutral300a */
+  --color-slate-250a: var(--ds-darkneutral350a); /* Dark mode: darkneutral350a, Light mode: neutral350a */
+  --color-slate-300a: var(--ds-darkneutral400a); /* Dark mode: darkneutral400a, Light mode: neutral400a */
+  --color-slate-400a: var(--ds-darkneutral500a); /* Dark mode: darkneutral500a, Light mode: neutral500a */
 
   /* Lightest & Darkest Tailwind Tokens (Light Mode) */
   --color-black: var(--ds-neutral1100); /* Black - Darkest neutral color */

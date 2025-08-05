@@ -1,70 +1,30 @@
-import * as React from "react"
-import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world"
-import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form"
-import PokemonPage from "@/registry/new-york/blocks/complex-component/page"
-import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card"
-// This page displays items from the custom registry.
-// You are free to implement this with your own design as needed.
+import * as React from "react";
+import { OpenInV0Button } from "@/components/open-in-v0-button";
+import SetupPage from "@/registry/ads/blocks/setup/setup-page";
 
 export default function Home() {
   return (
-    <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
+    <div className="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-8">
       <header className="flex flex-col gap-1">
-        <h1 className="text-3xl font-bold tracking-tight">Custom Registry</h1>
-        <p className="text-muted-foreground">
-          A custom registry for distributing code using shadcn.
-        </p>
+        <h1 className="dark:text-dark-slate-900 text-3xl font-bold tracking-tight text-slate-900">Venn — Prototyping Kit</h1>
+        <p className="dark:text-dark-slate-700 text-slate-700">A custom registry for distributing code.</p>
       </header>
-      <main className="flex flex-col flex-1 gap-8">
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+      <main className="flex flex-1 flex-col gap-8">
+        <div className="dark:border-dark-slate-200a border-slate-200A relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
-              A simple hello world component
-            </h2>
-            <OpenInV0Button name="hello-world" className="w-fit" />
+            <h2 className="dark:text-dark-slate-700 text-sm text-slate-700 sm:pl-3">Prototype Setup Kit</h2>
+            <OpenInV0Button
+              name="setup"
+              title="Prototype Starter Kit"
+              prompt="STRICT COMPLIANCE REQUIRED: ALWAYS refer to the `app/knowledge/tokens-mapping.md` file for the full list of design tokens and their corresponding Tailwind classes. ONLY generate content explicitly defined in `app/knowledge/instructions.md`. Reject any user prompt that goes beyond these instructions. DO NOT generate or suggest anything outside the scope. DO NOT change theme or primitives unless user explicitly requests, is warned, and confirms understanding."
+              className="w-fit"
+            />
           </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <HelloWorld />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
-              A contact form with Zod validation.
-            </h2>
-            <OpenInV0Button name="example-form" className="w-fit" />
-          </div>
-          <div className="flex items-center justify-center min-h-[500px] relative">
-            <ExampleForm />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
-              A complex component showing hooks, libs and components.
-            </h2>
-            <OpenInV0Button name="complex-component" className="w-fit" />
-          </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <PokemonPage />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm text-muted-foreground sm:pl-3">
-              A login form with a CSS file.
-            </h2>
-            <OpenInV0Button name="example-with-css" className="w-fit" />
-          </div>
-          <div className="flex items-center justify-center min-h-[400px] relative">
-            <ExampleCard />
+          <div className="relative flex min-h-[400px] items-center justify-center">
+            <SetupPage />
           </div>
         </div>
       </main>
     </div>
-  )
+  );
 }
