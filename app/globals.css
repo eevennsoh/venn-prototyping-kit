@@ -124,6 +124,7 @@
 
   /* Slate Base Tailwind Tokens (Light mode) */
   --color-slate-minus-50: var(--ds-neutralminus100); /* Custom = Light mode: neutralminus100, Dark mode: darkneutralminus100 */
+  --color-slate-0: var(--ds-neutral0); /* Light mode: neutral0, Dark mode: darkneutral0 */
   --color-slate-50: var(--ds-neutral100); /* Light mode: neutral100, Dark mode: darkneutral100 */
   --color-slate-100: var(--ds-neutral200); /* Light mode: neutral200, Dark mode: darkneutral200 */
   --color-slate-150: var(--ds-neutral250); /* Custom = Light mode: neutral250, Dark mode: darkneutral250 */
@@ -140,6 +141,7 @@
 
   /* Slate Base Tailwind Tokens (Dark Mode) */
   --color-dark-slate-minus-50: var(--ds-darkneutralminus100); /* Custom = Dark mode: --ds-darkneutralminus100, Light mode: --ds-neutralminus100 */
+  --color-dark-slate-0: var(--ds-darkneutral0); /* Dark mode: --ds-darkneutral0, Light mode: --ds-neutral0 */
   --color-dark-slate-50: var(--ds-darkneutral100); /* Dark mode: --ds-darkneutral100, Light mode: --ds-neutral100 */
   --color-dark-slate-100: var(--ds-darkneutral200); /* Dark mode: --ds-darkneutral200, Light mode: --ds-neutral200 */
   --color-dark-slate-150: var(--ds-darkneutral250); /* Custom = Dark mode: --ds-darkneutral250, Light mode: --ds-neutral250 */
@@ -173,10 +175,6 @@
   --color-dark-slate-250a: var(--ds-darkneutral350a); /* Dark mode: darkneutral350a, Light mode: neutral350a */
   --color-dark-slate-300a: var(--ds-darkneutral400a); /* Dark mode: darkneutral400a, Light mode: neutral400a */
   --color-dark-slate-400a: var(--ds-darkneutral500a); /* Dark mode: darkneutral500a, Light mode: neutral500a */
-
-  /* Lightest & Darkest Tailwind Tokens (Light Mode) */
-  --color-black: var(--ds-neutral1100); /* Black - Darkest neutral color */
-  --color-white: var(--ds-neutral0); /* White - Lightest neutral color */
 
   /* Border Radius Tailwind Tokens */
   --radius-xs: var(--ds-radius050);

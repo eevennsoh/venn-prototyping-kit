@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white font-sans antialiased dark:bg-black">
+      <body className="bg-slate-0 dark:bg-dark-slate-0 font-sans antialiased">
         <ThemeToggle />
         {children}
       </body>

@@ -34,12 +34,12 @@
 			"description": "Brand themed styles using Tailwind and Shadcn/ui",
 			"files": [
 				{
-					"path": "registry/ads/tokens.css",
+					"path": "app/tokens.css",
 					"type": "registry:file",
 					"target": "app/tokens.css"
 				},
 				{
-					"path": "registry/ads/globals.css",
+					"path": "app/globals.css",
 					"type": "registry:file",
 					"target": "app/globals.css"
 				}
@@ -49,12 +49,13 @@
 			"name": "icon-wrapper",
 			"type": "registry:component",
 			"title": "Icon Wrapper for Atlassian Design System Icons",
-			"description": "A wrapper component for icons",
-			"dependencies": ["@atlaskit/icon/core"],
-			"registryDependencies": ["dropdown-menu", "button", "avatar", "https://registry-test-three.vercel.app/r/theme.json"],
+			"description": "A wrapper component for Atlaskit icons",
+			"registryDependencies": [
+				"https://registry-test-three.vercel.app/r/theme.json"
+			],
 			"files": [
 				{
-					"path": "registry/ads/blocks/setup/components/icons/icon-wrapper.tsx",
+					"path": "components/icon-wrapper.tsx",
 					"type": "registry:component"
 				}
 			]
@@ -63,7 +64,7 @@
 			"name": "instructions",
 			"type": "registry:file",
 			"title": "Instructions",
-			"description": "Instructions for the application",
+			"description": "Instructions for the application.",
 			"files": [
 				{
 					"path": "registry/ads/instructions.md",
@@ -76,7 +77,7 @@
 			"name": "tokens-mapping",
 			"type": "registry:file",
 			"title": "Tokens Mapping",
-			"description": "Full list of Atlassian Design System design tokens and their corresponding Tailwind classes.",
+			"description": "Full list of Atlassian Design System design tokens and their corresponding Tailwind classes",
 			"files": [
 				{
 					"path": "registry/ads/tokens-mapping.md",

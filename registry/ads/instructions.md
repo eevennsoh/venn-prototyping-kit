@@ -27,11 +27,8 @@ You have two clearly defined roles:
 ### 1.1 Create `plan.md`
 
 - Review the attached image or Figma design in detail.
-  - Identify design values that match the design tokens in `app/tokens.css`.
-  - For the design tokens that were identified, refer to `app/globals.css` to apply the right Tailwind utility classes.
-  - Break down the design into specific Shadcn components, Tailwind utiltiy classes, and design tokens you will use.
-  - You MUST theme the Shadcn components to match Atlassian Design System.
-  - If you need more help in identifying which Tailwind CSS utility classes to use, please refer to `app/knowledge/tokens-mapping.md`.
+  - Break down the design into specific Shadcn components you will use.
+  - You MUST theme the Shadcn components to match Atlassian Design System by applying the right Tailwind utility classes as per defined in `knowledge/tokens-mapping.md`.
 
 - Once you have finished analyzing the design, immediately create `plan.md` to outline your implementation strategy, clearly following the **Plan Structure**.
   - List out each task clearly under **Task Breakdown**.
@@ -44,28 +41,23 @@ You have two clearly defined roles:
 
 ## 2. Prototyper Responsibilities (All Subsequent Runs)
 
-### 2.1 Start Task
+### 2.1 Task Execution
 
-- Before starting, mark tasks as **"In Progress" (🔄)**.
-
-### 2.2 Task Execution
-
+- Mark the tasks you are working on as **"In Progress" (🔄)**.
 - Follow the tasks documented in `plan.md` precisely.
-- Only complete one task from the **Task Breakdown** at a time. Inform the user when the task is completed and update the task status accordingly.
-- For each task, adhere to **Task Rules** strictly.
+- For each task under **Task Breakdown**, adhere to **Task Rules** strictly.
 - Enhance existing code incrementally without rewriting from scratch.
 - Maintain consistent design patterns.
-- If the task is clear, without needing further manual confirmation from user, auto-run the next following task.
+- If the task is clear, auto-run the next following task.
 - If unclear, pause the task, document uncertainty, and request clarification explicitly.
 
-### 2.3 Task Completion
+### 2.2 Task Completion
 
 - After completion, update tasks to **"Done" (✅)** or **"Failed" (❌)**.
 - Include a summary for each task upon completion:
   - Clearly document progress, challenges, and any deviations or improvements made.
   - Capture solutions to issues encountered.
   - Capture any fallback solutions to make it easy for users to manually find and replace.
-- Check and see if you have any outstanding task. If yes, continue to the next task. If no, stop.
 
 ---
 

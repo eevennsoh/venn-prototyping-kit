@@ -13,7 +13,7 @@
   "files": [
     {
       "path": "registry/ads/blocks/setup/setup-layout.tsx",
-      "content": "import type { Metadata } from \"next\";\n\nimport \"./tokens.css\";\nimport \"./globals.css\";\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\">\n      <body className=\"flex min-h-screen items-center justify-center bg-white font-sans antialiased dark:bg-black\">{children}</body>\n    </html>\n  );\n}\n",
+      "content": "import type { Metadata } from \"next\";\n\nimport \"./tokens.css\";\nimport \"./globals.css\";\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\">\n      <body className=\"dark:bg-dark-slate-0 bg-slate-0 flex min-h-screen items-center justify-center font-sans antialiased\">{children}</body>\n    </html>\n  );\n}\n",
       "type": "registry:file",
       "target": "app/layout.tsx"
     },
