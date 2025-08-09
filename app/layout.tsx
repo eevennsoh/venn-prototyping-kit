@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/registry/ads/lib/theme-provider";
 
 import "./tokens.css";
 import "./globals.css";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Venn — Prototyping Kit",
@@ -15,11 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-slate-0 dark:bg-dark-slate-0 font-sans antialiased">
-        <ThemeToggle />
-        {children}
-      </body>
-    </html>
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <body className="bg-slate-0 dark:bg-dark-slate-0 font-sans antialiased">
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            {children}{" "}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
   );
 }

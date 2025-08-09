@@ -15,6 +15,9 @@ importers:
       '@atlaskit/icon':
         specifier: ^27.9.2
         version: 27.9.2(@babel/core@7.26.10)(@types/react@19.1.2)(react@19.1.0)
+      '@atlaskit/logo':
+        specifier: ^19.6.1
+        version: 19.6.1(@types/react@19.1.2)(react@19.1.0)
       '@radix-ui/react-avatar':
         specifier: ^1.1.10
         version: 1.1.10(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -42,6 +45,9 @@ importers:
       next:
         specifier: 15.3.1
         version: 15.3.1(@babel/core@7.26.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      next-themes:
+        specifier: ^0.4.6
+        version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -114,6 +120,14 @@ packages:
     peerDependencies:
       react: ^18.2.0
 
+  '@atlaskit/codemod-utils@4.2.5':
+    resolution: {integrity: sha512-f7b7/BqfxbPtAfJXXgR8YfzOz9Mj912kBZB5Q/3ykKw9yvT8lQsZj6HOL7qMlHMutzPdz+uuF+duBVjybtNgCg==}
+
+  '@atlaskit/css@0.12.2':
+    resolution: {integrity: sha512-9JCMv+eS9wKupeqtSnNmiOXPV92torqNZVjd3XInyX867dvqksbgAkg74GgKxRrflw2hjsZuOhG57ffdJQ1F/g==}
+    peerDependencies:
+      react: ^18.2.0
+
   '@atlaskit/ds-lib@5.0.0':
     resolution: {integrity: sha512-Bd0/D5Q2Sg/Z1kg/Qst+2VfiVoVuGwEvrWKSt63QgDaCizl30j2EtqLLF9U978mzl1JHMmi3KQeYf3ROjhoACA==}
     peerDependencies:
@@ -127,8 +141,23 @@ packages:
     peerDependencies:
       react: ^18.2.0
 
+  '@atlaskit/logo@19.6.1':
+    resolution: {integrity: sha512-bIiEbigy3z7NfVGvoqlaN3JQdfQM5NPsdyftStw1QwhG5Q7oyDlNRoAtjmjofBp1ZfGTbNXbjP9vcnGANkGGOw==}
+    peerDependencies:
+      react: ^18.2.0
+
   '@atlaskit/platform-feature-flags@1.1.1':
     resolution: {integrity: sha512-YKuy3RsqCEoNALiMHVma0GGHkzZMSIBsEgZlV/2TPw65QRzOWJvKA3ZIKucmXzr3m7AUqg1XHwXvVlUuNZhUgg==}
+
+  '@atlaskit/temp-nav-app-icons@0.9.3':
+    resolution: {integrity: sha512-NyyaAyNWQ4Yv1UrIjkRtSazyY/0evC1qafALpCjVoTjo8arTLptRbD+6wXpzN56nLBPk1rLq4nVXfvCo/p02LQ==}
+    peerDependencies:
+      react: ^18.2.0
+
+  '@atlaskit/theme@19.0.2':
+    resolution: {integrity: sha512-sIFwGr6jmcnFwobys+85nts2v5KF/lbis+jhU5D09nLsscRC7t/TqxRyrE6q7Ewd3cnyXwFG0vQsTDSCRsqgVg==}
+    peerDependencies:
+      react: ^18.2.0
 
   '@atlaskit/tokens@6.0.0':
     resolution: {integrity: sha512-KofyBwF86HsQPoldfihaukihE9tPqe4cbjgYDmSl8KOXDdAQDpGg9TnUAGknxu3p8EsLZpViG53HfwWvLjs+pQ==}
@@ -2444,6 +2473,12 @@ packages:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
 
+  next-themes@0.4.6:
+    resolution: {integrity: sha512-pZvgD5L0IEvX5/9GWyHMf3m8BKiVQwsCMHfoFosXtXBMnaS0ZnIJ9ST4b4NqLVKDEm8QBxoNNGNaBv2JNF6XNA==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+
   next@15.3.1:
     resolution: {integrity: sha512-8+dDV0xNLOgHlyBxP1GwHGVaNXsmp+2NhZEYrXr24GWLHtt27YrBPbPuHvzlhi7kZNYjeJNR93IF5zfFu5UL0g==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
@@ -3326,6 +3361,20 @@ snapshots:
       '@babel/runtime': 7.28.2
       react: 19.1.0
 
+  '@atlaskit/codemod-utils@4.2.5':
+    dependencies:
+      '@babel/runtime': 7.28.2
+
+  '@atlaskit/css@0.12.2(@types/react@19.1.2)(react@19.1.0)':
+    dependencies:
+      '@atlaskit/tokens': 6.0.0(@types/react@19.1.2)(react@19.1.0)
+      '@babel/runtime': 7.28.2
+      '@compiled/react': 0.18.6(react@19.1.0)
+      react: 19.1.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
+
   '@atlaskit/ds-lib@5.0.0(@types/react@19.1.2)(react@19.1.0)':
     dependencies:
       '@atlaskit/platform-feature-flags': 1.1.1(react@19.1.0)
@@ -3360,12 +3409,48 @@ snapshots:
       - '@types/react'
       - supports-color
 
+  '@atlaskit/logo@19.6.1(@types/react@19.1.2)(react@19.1.0)':
+    dependencies:
+      '@atlaskit/ds-lib': 5.0.0(@types/react@19.1.2)(react@19.1.0)
+      '@atlaskit/platform-feature-flags': 1.1.1(react@19.1.0)
+      '@atlaskit/temp-nav-app-icons': 0.9.3(@types/react@19.1.2)(react@19.1.0)
+      '@atlaskit/theme': 19.0.2(@types/react@19.1.2)(react@19.1.0)
+      '@atlaskit/tokens': 6.0.0(@types/react@19.1.2)(react@19.1.0)
+      '@babel/runtime': 7.28.2
+      '@compiled/react': 0.18.6(react@19.1.0)
+      react: 19.1.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
+
   '@atlaskit/platform-feature-flags@1.1.1(react@19.1.0)':
     dependencies:
       '@atlaskit/feature-gate-js-client': 5.5.3(react@19.1.0)
       '@babel/runtime': 7.28.2
     transitivePeerDependencies:
       - react
+
+  '@atlaskit/temp-nav-app-icons@0.9.3(@types/react@19.1.2)(react@19.1.0)':
+    dependencies:
+      '@atlaskit/css': 0.12.2(@types/react@19.1.2)(react@19.1.0)
+      '@atlaskit/tokens': 6.0.0(@types/react@19.1.2)(react@19.1.0)
+      '@babel/runtime': 7.28.2
+      '@compiled/react': 0.18.6(react@19.1.0)
+      react: 19.1.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
+
+  '@atlaskit/theme@19.0.2(@types/react@19.1.2)(react@19.1.0)':
+    dependencies:
+      '@atlaskit/codemod-utils': 4.2.5
+      '@atlaskit/ds-lib': 5.0.0(@types/react@19.1.2)(react@19.1.0)
+      '@atlaskit/tokens': 6.0.0(@types/react@19.1.2)(react@19.1.0)
+      '@babel/runtime': 7.28.2
+      react: 19.1.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
 
   '@atlaskit/tokens@6.0.0(@types/react@19.1.2)(react@19.1.0)':
     dependencies:
@@ -5793,6 +5878,11 @@ snapshots:
   natural-compare@1.4.0: {}
 
   negotiator@1.0.0: {}
+
+  next-themes@0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   next@15.3.1(@babel/core@7.26.10)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:

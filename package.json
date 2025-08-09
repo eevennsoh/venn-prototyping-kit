@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@atlaskit/icon": "^27.9.2",
+    "@atlaskit/logo": "^19.6.1",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-label": "^2.1.4",
@@ -22,6 +23,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.487.0",
     "next": "15.3.1",
+    "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "shadcn": "^2.4.1",

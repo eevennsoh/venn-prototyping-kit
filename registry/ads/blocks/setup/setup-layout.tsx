@@ -1,3 +1,4 @@
+// Use inside registry.json files to define the layout of the page
 import type { Metadata } from "next";
 
 import "./tokens.css";

@@ -4,7 +4,7 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { IconWrapper } from "@/components/icon-wrapper";
+import { IconWrapper } from "@/registry/ads/lib/icon-wrapper";
 
 // Import icons from Atlassian Design System
 import CopyIconCore from "@atlaskit/icon/core/copy";
@@ -24,7 +24,7 @@ interface CopyButtonProps {
   ariaLabel?: string;
 }
 
-export function CopyButton({
+export default function CopyButton({
   textToCopy,
   registryName,
   tooltipText = "Copy to clipboard",

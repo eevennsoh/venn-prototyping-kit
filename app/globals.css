@@ -228,7 +228,7 @@
   /* Spacing Multiplier Tailwind Tokens */
   /* This is used to calculate the line-height, padding, and margin utilities */
   /* e.g., --leading-<number> = line-height: calc(var(--spacing) * <number>) */
-  --spacing: var(--ds-space050);
+  --spacing: var(--ds-space050); /* 4px */
 
   /* Shadow Tailwind Tokens (Light Mode) */
   --shadow-md: var(--ds-elevation-shadow-raised);
@@ -241,6 +241,9 @@
   --shadow-dark-xl: var(--ds-dark-elevation-shadow-overlay);
 
   /* Shadcn Tokens */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 

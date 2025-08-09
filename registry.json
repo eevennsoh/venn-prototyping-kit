@@ -28,10 +28,23 @@
 			]
 		},
 		{
+			"name": "ads-style",
+			"type": "registry:style",
+			"title": "Atlassian Design System Styles",
+			"description": "Design tokens from Atlassian Design System",
+			"files": [
+				{
+					"path": "app/tokens.css",
+					"type": "registry:file",
+					"target": "app/tokens.css"
+				}
+			]
+		},
+		{
 			"name": "theme",
 			"type": "registry:theme",
 			"title": "Global Theme",
-			"description": "Brand themed styles using Tailwind and Shadcn/ui",
+			"description": "Atlassian Design System theme using Tailwind and Shadcn/ui",
 			"files": [
 				{
 					"path": "app/tokens.css",
@@ -47,16 +60,25 @@
 		},
 		{
 			"name": "icon-wrapper",
-			"type": "registry:component",
+			"type": "registry:lib",
 			"title": "Icon Wrapper for Atlassian Design System Icons",
 			"description": "A wrapper component for Atlaskit icons",
-			"registryDependencies": [
-				"https://registry-test-three.vercel.app/r/theme.json"
-			],
 			"files": [
 				{
-					"path": "components/icon-wrapper.tsx",
-					"type": "registry:component"
+					"path": "registry/ads/lib/icon-wrapper.tsx",
+					"type": "registry:lib"
+				}
+			]
+		},
+		{
+			"name": "logo-wrapper",
+			"type": "registry:lib",
+			"title": "Logo Wrapper for Atlassian Design System Logos",
+			"description": "A wrapper component for Atlaskit product logos",
+			"files": [
+				{
+					"path": "registry/ads/lib/logo-wrapper.tsx",
+					"type": "registry:lib"
 				}
 			]
 		},
@@ -83,6 +105,23 @@
 					"path": "registry/ads/tokens-mapping.md",
 					"type": "registry:file",
 					"target": "app/knowledge/tokens-mapping.md"
+				}
+			]
+		},
+		{
+			"name": "navigation",
+			"type": "registry:component",
+			"title": "Top Navigation Component",
+			"description": "A header navigation bar using ADS tokens and shadcn/ui",
+			"registryDependencies": [
+				"https://registry-test-three.vercel.app/r/theme.json",
+				"https://registry-test-three.vercel.app/r/icon-wrapper.json",
+				"https://registry-test-three.vercel.app/r/logo-wrapper.json"
+			],
+			"files": [
+				{
+					"path": "registry/ads/components/navigation.tsx",
+					"type": "registry:component"
 				}
 			]
 		}

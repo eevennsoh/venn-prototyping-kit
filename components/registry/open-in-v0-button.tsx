@@ -18,7 +18,7 @@ function buildV0Url(url: string, title?: string, prompt?: string) {
   return `https://v0.dev/chat/api/open?${params.toString()}`;
 }
 
-export function OpenInV0Button({
+export default function OpenInV0Button({
   name,
   title,
   baseURL = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.NEXT_LOCALHOST_URL || "",
