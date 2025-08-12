@@ -1,38 +1,43 @@
-import * as React from "react";
 import type { ComponentType } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-interface IconProps {
-  size?: "small" | "medium";
-  variant?: "default" | "subtle" | "subtlest";
+type IconSize = "small" | "medium";
+
+const iconVariants = cva("inline-flex items-center justify-center", {
+  variants: {
+    appearance: {
+      default: "text-slate-900",
+      subtle: "text-slate-700",
+      subtlest: "text-slate-600",
+      inverse: "text-slate-0",
+    },
+    size: {
+      small: "size-3", // 12px
+      medium: "size-4", // 16px
+    },
+  },
+  defaultVariants: {
+    size: "medium",
+    appearance: "default",
+  },
+});
+
+interface IconProps extends VariantProps<typeof iconVariants> {
+  label?: string;
 }
 
 interface AtlaskitIconProps {
-  size?: "small" | "medium";
-  color?: string;
+  size?: IconSize;
+  label: string;
 }
 
-export function IconWrapper<IconComponentProps extends AtlaskitIconProps>(IconComponent: ComponentType<IconComponentProps>) {
-  return function WrappedIcon({ size = "medium", variant = "default", ...iconProps }: IconProps & IconComponentProps) {
-    // Fixed dimensions based on size
-    const dimensions = size === "small" ? 12 : 16;
-
-    // Color variants based on CSS custom properties that match Atlassian Design System tokens
-    const colorValues = {
-      default: "text-slate-900 dark:text-dark-slate-900", // Strong contrast
-      subtle: "text-slate-700 dark:text-dark-slate-700", // Medium contrast
-      subtlest: "text-slate-600 dark:text-dark-slate-600", // Low contrast
-    };
-
+export function IconWrapper<T extends AtlaskitIconProps>(IconComponent: ComponentType<T>) {
+  return function WrappedIcon({ size, appearance, label = "", ...iconProps }: IconProps & T) {
     return (
-      <div
-        className={`inline-flex items-center justify-center ${colorValues[variant]}`}
-        style={{
-          width: `${dimensions}px`,
-          height: `${dimensions}px`,
-        }}
-      >
-        <IconComponent size={size} {...(iconProps as IconComponentProps)} />
-      </div>
+      <span data-slot="icon" className={cn(iconVariants({ size, appearance }))} aria-hidden={label ? undefined : true}>
+        <IconComponent {...(iconProps as T)} size={(size as IconSize) ?? "medium"} label={label} />
+      </span>
     );
   };
 }

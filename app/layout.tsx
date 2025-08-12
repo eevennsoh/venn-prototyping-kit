@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <body className="bg-slate-0 dark:bg-dark-slate-0 font-sans antialiased">
+        <body className="bg-slate-0 font-sans antialiased">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             {children}{" "}
           </ThemeProvider>

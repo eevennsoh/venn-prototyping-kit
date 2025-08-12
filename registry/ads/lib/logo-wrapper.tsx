@@ -1,50 +1,59 @@
 "use client";
 
-import * as React from "react";
 import type { ComponentType } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
-interface LogoWrapperProps {
-  size?: "xxsmall" | "xsmall" | "small" | "medium" | "large" | "xlarge";
-  showText?: boolean; // true: render Atlaskit Logo (with wordmark); false: render Atlaskit Icon (glyph only)
+type LogoSize = "xxsmall" | "xsmall" | "small" | "medium" | "large" | "xlarge";
+type LogoAppearance = "brand" | "neutral" | "inverse";
+
+const logoVariants = cva("inline-flex items-center", {
+  variants: {
+    size: {
+      xxsmall: "",
+      xsmall: "",
+      small: "",
+      medium: "",
+      large: "",
+      xlarge: "",
+    },
+    appearance: {
+      brand: "",
+      neutral: "",
+      inverse: "",
+    },
+  },
+  defaultVariants: {
+    size: "medium",
+    appearance: "brand",
+  },
+});
+
+interface LogoWrapperProps extends VariantProps<typeof logoVariants> {
+  showText?: boolean;
 }
 
 interface AtlaskitLogoProps {
-  appearance?: "brand" | "neutral" | "inverse";
+  appearance?: LogoAppearance;
   shouldUseNewLogoDesign?: boolean;
-  size?: "xxsmall" | "xsmall" | "small" | "medium" | "large" | "xlarge";
+  size?: LogoSize;
 }
 
 export function LogoWrapper(IconComponent: ComponentType<AtlaskitLogoProps>, LogoComponent: ComponentType<AtlaskitLogoProps>) {
-  return function WrappedLogo({ size = "medium", showText = true, ...logoProps }: LogoWrapperProps & AtlaskitLogoProps) {
-    // Map our size props to Atlaskit logo sizes
-    const atlaskitSizeMap = {
-      xxsmall: "xxsmall" as const,
-      xsmall: "xsmall" as const,
-      small: "small" as const,
-      medium: "medium" as const,
-      large: "large" as const,
-      xlarge: "xlarge" as const,
-    };
-
-    const shared: AtlaskitLogoProps = {
+  return function WrappedLogo({ size, appearance, showText = true, ...logoProps }: LogoWrapperProps & AtlaskitLogoProps) {
+    const sharedProps: AtlaskitLogoProps = {
       shouldUseNewLogoDesign: true,
-      size: atlaskitSizeMap[size],
+      size: (size as LogoSize) ?? "medium",
+      appearance: (appearance as LogoAppearance) ?? "brand",
+      ...logoProps,
     };
 
-    const { appearance = "brand", ...restLogoProps } = logoProps;
-
-    if (showText) {
-      return (
-        <div className="inline-flex items-center">
-          <LogoComponent {...shared} {...restLogoProps} appearance={appearance} />
-        </div>
-      );
-    }
+    const Component = showText ? LogoComponent : IconComponent;
 
     return (
-      <div className="inline-flex items-center">
-        <IconComponent {...shared} {...restLogoProps} appearance={appearance} />
-      </div>
+      <span data-slot="logo" className={cn(logoVariants({ size, appearance }))}>
+        <Component {...sharedProps} />
+      </span>
     );
   };
 }
