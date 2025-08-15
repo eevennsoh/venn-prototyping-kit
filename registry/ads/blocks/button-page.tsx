@@ -14,8 +14,8 @@ function ButtonShowcase() {
     <div className="flex h-full flex-col gap-6 p-4">
       {/* Variants */}
       <div className="space-y-4">
-        <h3 className="font-semibold">Variants</h3>
-        <div className="flex flex-wrap items-center gap-3">
+        <h3 className="font-semibold">Appearance</h3>
+        <div className="flex flex-wrap items-center gap-4">
           <Button appearance="default">Default</Button>
           <Button appearance="primary">Primary</Button>
           <Button appearance="subtle">Subtle</Button>
@@ -28,7 +28,7 @@ function ButtonShowcase() {
       {/* Sizes */}
       <div className="space-y-4">
         <h3 className="font-semibold">Sizes</h3>
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-4">
           <Button spacing="default">Default</Button>
           <Button spacing="icon" aria-label="Settings">
             <SettingsIcon label="Settings" />
@@ -43,7 +43,7 @@ function ButtonShowcase() {
       {/* With icons */}
       <div className="space-y-4">
         <h3 className="font-semibold">With Icons</h3>
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-4">
           <Button>
             <AddIcon label="Add" />
             Create
@@ -62,7 +62,7 @@ function ButtonShowcase() {
       {/* States */}
       <div className="space-y-4">
         <h3 className="font-semibold">States</h3>
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-4">
           <Button disabled>Disabled</Button>
           <Button appearance="default" aria-invalid>
             Invalid

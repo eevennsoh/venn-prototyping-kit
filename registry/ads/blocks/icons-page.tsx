@@ -19,52 +19,41 @@ const SettingsIcon = IconWrapper(SettingsIconCore);
 function IconsShowcase() {
   return (
     <div className="flex h-full flex-col gap-6 p-4">
+      {/* Appearance */}
+      <div className="space-y-4">
+        <h3 className="font-semibold">Appearance</h3>
+        <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+            <AddIcon appearance="default" label="Add" />
+            <span className="text-muted-foreground text-xs">default</span>
+          </div>
+          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+            <AddIcon appearance="subtle" label="Add" />
+            <span className="text-muted-foreground text-xs">subtle</span>
+          </div>
+          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+            <AddIcon appearance="subtlest" label="Add" />
+            <span className="text-muted-foreground text-xs">subtlest</span>
+          </div>
+          <div className="bg-dark-slate-100 flex flex-col items-start gap-1 rounded-sm p-2">
+            <AddIcon appearance="inverse" label="Add" />
+            <span className="text-muted-foreground text-text-inverse text-xs">inverse</span>
+          </div>
+        </div>
+      </div>
+
       {/* Sizes */}
       <div className="space-y-4">
         <h3 className="font-semibold">Sizes</h3>
         <div className="flex flex-wrap items-center gap-4">
-          <div className="flex flex-col items-start gap-1">
-            <SearchIcon size="small" label="Search" />
-            <span className="text-muted-foreground text-xs">small (12px)</span>
-          </div>
-          <div className="flex flex-col items-start gap-1">
+          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
             <SearchIcon size="medium" label="Search" />
             <span className="text-muted-foreground text-xs">medium (16px)</span>
           </div>
-        </div>
-      </div>
-
-      {/* Variants */}
-      <div className="space-y-4">
-        <h3 className="font-semibold">Variants</h3>
-        <div className="flex flex-wrap items-center gap-4">
-          <div className="flex flex-col items-start gap-1">
-            <AddIcon appearance="default" label="Add" />
-            <span className="text-muted-foreground text-xs">default</span>
+          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+            <SearchIcon size="small" label="Search" />
+            <span className="text-muted-foreground text-xs">small (12px)</span>
           </div>
-          <div className="flex flex-col items-start gap-1">
-            <AddIcon appearance="subtle" label="Add" />
-            <span className="text-muted-foreground text-xs">subtle</span>
-          </div>
-          <div className="flex flex-col items-start gap-1">
-            <AddIcon appearance="subtlest" label="Add" />
-            <span className="text-muted-foreground text-xs">subtlest</span>
-          </div>
-          <div className="flex flex-col items-start gap-1">
-            <AddIcon appearance="inverse" label="Add" />
-            <span className="text-muted-foreground text-xs">inverse</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Common icons */}
-      <div className="space-y-4">
-        <h3 className="font-semibold">Common</h3>
-        <div className="flex flex-wrap items-center gap-4">
-          <AppSwitcherIcon label="App switcher" />
-          <NotificationIcon label="Notifications" />
-          <QuestionCircleIcon label="Help" />
-          <SettingsIcon label="Settings" />
         </div>
       </div>
     </div>

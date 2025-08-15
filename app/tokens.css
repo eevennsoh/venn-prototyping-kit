@@ -212,23 +212,20 @@
 
   /* Typography Tokens */
   /* Font Size Tokens */
-  --ds-fontsizecode: 0.875em;
-  --ds-fontsize12: 12px;
-  --ds-fontsize14: 14px;
-  --ds-fontsize16: 16px;
-  --ds-fontsize20: 20px;
-  --ds-fontsize24: 24px;
-  --ds-fontsize28: 28px;
-  --ds-fontsize32: 32px;
-  --ds-fontsize36: 36px;
-  --ds-fontsize48: 48px;
+  --ds-fontsizecode: 0.875em; /* 14px */
+  --ds-fontsize12: 0.75rem; /* 12px */
+  --ds-fontsize14: 0.875rem; /* 14px */
+  --ds-fontsize16: 1rem; /* 16px */
+  --ds-fontsize20: 1.25rem; /* 20px */
+  --ds-fontsize24: 1.5rem; /* 24px */
+  --ds-fontsize28: 1.75rem; /* 28px */
+  --ds-fontsize32: 2rem; /* 32px */
 
   /* Font Weight Tokens */
   --ds-fontweight400: 400;
   --ds-fontweight500: 500;
   --ds-fontweight600: 600;
-  --ds-fontweight653: 653;
-  --ds-fontweight700: 700;
+  --ds-fontweight653: 653; /* 653 is the font weight for bold */
 
   /* Font Family Tokens */
   --ds-fontfamilycharliedisplay: "Charlie Display", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
@@ -241,16 +238,13 @@
   --ds-fontfamilyandroidmono: Roboto Mono;
 
   /* Line Height Tokens */
-  --ds-lineheight1: 1;
-  --ds-lineheight16: 16;
-  --ds-lineheight20: 20;
-  --ds-lineheight24: 24;
-  --ds-lineheight28: 28;
-  --ds-lineheight32: 32;
-  --ds-lineheight36: 36;
-  --ds-lineheight40: 40;
-  --ds-lineheight48: 48;
-  --ds-lineheight56: 56;
+  --ds-lineheight1: 1; /* height of a line box will be exactly equal to the font-size */
+  --ds-lineheight16: 1rem; /* 16px */
+  --ds-lineheight20: 1.25rem; /* 20px */
+  --ds-lineheight24: 1.5rem; /* 24px */
+  --ds-lineheight28: 1.75rem; /* 28px */
+  --ds-lineheight32: 2rem; /* 32px */
+  --ds-lineheight36: 2.25rem; /* 36px */
 
   /* Letter Spacing Tokens */
   --ds-letterspacing0: 0;
@@ -268,6 +262,17 @@
   --ds-darkelevation-shadow-raised: 0 0 0 rgba(0, 0, 0, 0), 0 1px 1px rgba(3, 4, 4, 0.5), 0 0 1px rgba(3, 4, 4, 0.5);
   --ds-darkelevation-shadow-overflow: 0 0 12px rgba(3, 4, 4, 0.56), 0 0 1px rgba(3, 4, 4, 0.5);
   --ds-darkelevation-shadow-overlay: 0 0 0 rgba(57, 66, 74, 1), 0 8px 12px rgba(3, 4, 4, 0.36), 0 0 1px rgba(3, 4, 4, 0.5);
+
+  /* Z-Index Base Tokens */
+  --ds-z100: 100; /* Card */
+  --ds-z200: 200; /* Navigation */
+  --ds-z300: 300; /* Dialog */
+  --ds-z400: 400; /* Layer */
+  --ds-z500: 500; /* Blanket */
+  --ds-z510: 510; /* Modal */
+  --ds-z600: 600; /* Flag */
+  --ds-z700: 700; /* Spotlight */
+  --ds-z800: 800; /* Tooltip */
 
   /* ADS Theming (Light mode) */
 
@@ -379,7 +384,7 @@
   --lime900: var(--ds-lime900);
   --lime1000: var(--ds-lime1000);
 
-  /* Neutral Base Tokens */
+  /* Neutral Base Tokens (Light mode) */
   --neutralminus100: var(--ds-neutralminus100); /* Custom */
   --neutralminus100a: var(--ds-neutralminus100a); /* Custom = 3% opacity */
   --neutral0: var(--ds-neutral0);
@@ -403,6 +408,31 @@
   --neutral900: var(--ds-neutral900);
   --neutral1000: var(--ds-neutral1000);
   --neutral1100: var(--ds-neutral1100);
+
+  /* Neutral Base Tokens (Dark mode) */
+  --darkneutralminus100: var(--ds-darkneutralminus100); /* Custom */
+  --darkneutralminus100a: var(--ds-darkneutralminus100a); /* Custom = 3% opacity */
+  --darkneutral0: var(--ds-darkneutral0);
+  --darkneutral100: var(--ds-darkneutral100);
+  --darkneutral100a: var(--ds-darkneutral100a); /* 4% opacity */
+  --darkneutral200: var(--ds-darkneutral200);
+  --darkneutral200a: var(--ds-darkneutral200a); /* 7% opacity */
+  --darkneutral250: var(--ds-darkneutral250);
+  --darkneutral250a: var(--ds-darkneutral250a); /* 10% opacity */
+  --darkneutral300: var(--ds-darkneutral300);
+  --darkneutral300a: var(--ds-darkneutral300a); /* 12% opacity */
+  --darkneutral350: var(--ds-darkneutral350);
+  --darkneutral350a: var(--ds-darkneutral350a); /* 18% opacity */
+  --darkneutral400: var(--ds-darkneutral400);
+  --darkneutral400a: var(--ds-darkneutral400a); /* 25% opacity */
+  --darkneutral500: var(--ds-darkneutral500);
+  --darkneutral500a: var(--ds-darkneutral500a); /* 36% opacity */
+  --darkneutral600: var(--ds-darkneutral600);
+  --darkneutral700: var(--ds-darkneutral700);
+  --darkneutral800: var(--ds-darkneutral800);
+  --darkneutral900: var(--ds-darkneutral900);
+  --darkneutral1000: var(--ds-darkneutral1000);
+  --darkneutral1100: var(--ds-darkneutral1100);
 
   /* Elevation Tokens */
   --elevation-shadow-raised: var(--ds-elevation-shadow-raised);
@@ -523,7 +553,7 @@
   --background-warning-bold-pressed: var(--ds-yellow500);
 
   --text: var(--neutral1000);
-  --text-inverse: var(--ds-neutral0);
+  --text-inverse: var(--neutral0);
 
   --icon-accent-red: var(--ds-red700);
   --icon-accent-yellow: var(--ds-yellow600);
@@ -534,6 +564,24 @@
   --border-focused: var(--ds-blue500);
   --border-input: var(--ds-neutral500);
   --border-warning: var(--ds-orange600);
+
+  --interaction-hovered: #00000029;
+  --interaction-pressed: #00000052;
+
+  --blanket: var(--ds-neutral500a);
+  --blanket-danger: #ef5c4814;
+  --blanket-selected: #4688ec14;
+
+  --elevation-surface: var(--ds-neutral0);
+  --elevation-surface-pressed: var(--ds-neutral300);
+  --elevation-surface-overlay: var(--ds-neutral0);
+  --elevation-surface-overlay-hovered: var(--ds-neutral200);
+  --elevation-surface-overlay-pressed: var(--ds-neutral300);
+  --elevation-surface-raised: var(--ds-neutral0);
+  --elevation-surface-raised-hovered: var(--ds-neutral200);
+  --elevation-surface-sunken: var(--ds-neutral100);
+
+  --utility-elevation-surface-current: var(--ds-neutral0);
 
   /* --input: var(--ds-neutral0); */
   --input-hovered: var(--ds-neutral00);
@@ -651,7 +699,7 @@
   --lime900: var(--ds-lime200);
   --lime1000: var(--ds-lime100);
 
-  /* Neutral Base Tokens */
+  /* Neutral Base Tokens (Light mode inverse) */
   --neutralminus100: var(--ds-darkneutralminus100);
   --neutralminus100a: var(--ds-darkneutralminus100a);
   --neutral0: var(--ds-darkneutral0);
@@ -675,6 +723,31 @@
   --neutral900: var(--ds-darkneutral900);
   --neutral1000: var(--ds-darkneutral1000);
   --neutral1100: var(--ds-darkneutral1100);
+
+  /* Neutral Base Tokens (Dark mode inverse) */
+  --darkneutralminus100: var(--ds-neutralminus100);
+  --darkneutralminus100a: var(--ds-neutralminus100a);
+  --darkneutral0: var(--ds-neutral0);
+  --darkneutral100: var(--ds-neutral100);
+  --darkneutral100a: var(--ds-neutral100a);
+  --darkneutral200: var(--ds-neutral200);
+  --darkneutral200a: var(--ds-neutral200a);
+  --darkneutral250: var(--ds-neutral250);
+  --darkneutral250a: var(--ds-neutral250a);
+  --darkneutral300: var(--ds-neutral300);
+  --darkneutral300a: var(--ds-neutral300a);
+  --darkneutral350: var(--ds-neutral350);
+  --darkneutral350a: var(--ds-neutral350a);
+  --darkneutral400: var(--ds-neutral400);
+  --darkneutral400a: var(--ds-neutral400a);
+  --darkneutral500: var(--ds-neutral500);
+  --darkneutral500a: var(--ds-neutral500a);
+  --darkneutral600: var(--ds-neutral600);
+  --darkneutral700: var(--ds-neutral700);
+  --darkneutral800: var(--ds-neutral800);
+  --darkneutral900: var(--ds-neutral900);
+  --darkneutral1000: var(--ds-neutral1000);
+  --darkneutral1100: var(--ds-neutral1100);
 
   /* Elevation Tokens */
   --elevation-shadow-raised: var(--ds-darkelevation-shadow-raised);
@@ -793,7 +866,7 @@
   --background-warning-bold-hovered: var(--ds-yellow400);
   --background-warning-bold-pressed: var(--ds-yellow500);
 
-  --text: var(--darkneutral900);
+  --text: var(--ds-darkneutral900);
   --text-inverse: var(--ds-darkneutral100);
 
   --icon-accent-red: var(--ds-red600);
@@ -805,6 +878,24 @@
   --border-focused: var(--ds-blue300);
   --border-input: var(--ds-darkneutral600);
   --border-warning: var(--ds-yellow500);
+
+  --interaction-hovered: #ffffff33;
+  --interaction-pressed: #ffffff5c;
+
+  --blanket: #10121499;
+  --blanket-danger: #e3493514;
+  --blanket-selected: #357de814;
+
+  --elevation-surface: var(--ds-darkneutral100);
+  --elevation-surface-pressed: var(--ds-darkneutral250);
+  --elevation-surface-overlay: var(--ds-darkneutral250);
+  --elevation-surface-overlay-hovered: var(--ds-darkneutral300);
+  --elevation-surface-overlay-pressed: var(--ds-darkneutral350);
+  --elevation-surface-raised: var(--ds-darkneutral200);
+  --elevation-surface-raised-hovered: var(--ds-darkneutral250);
+  --elevation-surface-sunken: var(--ds-darkneutral0);
+
+  --utility-elevation-surface-current: var(--ds-darkneutral100);
 
   /* --input: var(--ds-darkneutral200); */
   --input-hovered: var(--ds-darkneutral250);
