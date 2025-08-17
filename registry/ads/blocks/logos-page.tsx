@@ -11,7 +11,7 @@ function LogoShowcase() {
   return (
     <div className="flex h-full flex-col gap-6 p-4">
       <div className="space-y-4">
-        <h3 className="font-semibold">Different Sizes</h3>
+        <h3 className="text-text">Different Sizes</h3>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col items-start gap-1">
             <Confluence size="xxsmall" />
@@ -42,7 +42,7 @@ function LogoShowcase() {
 
       {/* With/without text */}
       <div className="space-y-4">
-        <h3 className="dark:text-dark-slate-900 font-semibold text-slate-900">With/Without Text</h3>
+        <h3 className="text-text">With/Without Text</h3>
         <div className="flex flex-col items-start gap-4">
           <Jira showText={false} />
           <Jira showText={true} />

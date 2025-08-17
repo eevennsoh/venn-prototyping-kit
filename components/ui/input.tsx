@@ -8,9 +8,21 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       type={type}
       data-slot="input"
       className={cn(
-        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground bg-slate-0 active:bg-slate-0 border-input flex h-9 w-full min-w-0 rounded-sm border px-3 py-1 text-sm shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium hover:bg-slate-50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40",
-        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-2",
-        "aria-invalid:ring-destructive/20 aria-invalid:border-destructive",
+        // Base styles using ADS tokens
+        "bg-slate-0 border-slate-400 text-slate-900 placeholder:text-slate-600",
+        "flex h-9 w-full min-w-0 rounded-sm border px-3 py-1 text-sm transition-all outline-none",
+        // Hover states
+        "hover:bg-slate-50",
+        // Focus states using ADS focus tokens
+        "focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-400/20",
+        // Invalid/error states using ADS danger tokens
+        "aria-invalid:border-red-500 aria-invalid:ring-2 aria-invalid:ring-red-500/20",
+        // Disabled states using ADS disabled tokens
+        "disabled:bg-slate-50a disabled:border-slate-100a disabled:text-slate-300a disabled:pointer-events-none disabled:cursor-not-allowed",
+        // File input specific styles
+        "file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-slate-900",
+        // Selection styles using ADS brand colors
+        "selection:text-slate-0 selection:bg-blue-600",
         className,
       )}
       {...props}

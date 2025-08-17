@@ -4,7 +4,7 @@ This document contains all Atlassian Design System tokens organized by category.
 
 ## Summary
 
-Total tokens: 453
+Total tokens: 473
 
 - **Background Colors**: 181 tokens
 - **Text Colors**: 33 tokens
@@ -20,11 +20,14 @@ Total tokens: 453
 - **Opacity**: 2 tokens
 - **Utility**: 1 token
 - **Spacing**: 23 tokens
+- **Font Size**: 8 tokens
 - **Font Family**: 5 tokens
 - **Font Weight**: 4 tokens
 - **Typography Styles**: 14 tokens
 - **Border Radius**: 7 tokens
 - **Border Widths**: 2 tokens
+- **Line Height**: 7 tokens
+- **Letter Spacing**: 5 tokens
 
 ## Background Colors
 
@@ -506,6 +509,19 @@ Total tokens: 453
 | `space.negative.300` | -24px | `-m-6`         | Use to negate parent whitespace or overlap larger pieces of UI.      |
 | `space.negative.400` | -32px | `-m-8`         | Use to negate parent whitespace or overlap the largest pieces of UI. |
 
+## Font Size
+
+| Token            | Value    | Base Token        | Tailwind Class | Usage                                          |
+| ---------------- | -------- | ----------------- | -------------- | ---------------------------------------------- |
+| `font.size.code` | 0.875em  | ds-font-size-code | `text-sm`      | For code text elements. Relative to font size. |
+| `font.size.12`   | 0.75rem  | ds-font-size12    | `text-xs`      | Extra small text size (12px)                   |
+| `font.size.14`   | 0.875rem | ds-font-size14    | `text-sm`      | Small text size (14px)                         |
+| `font.size.16`   | 1rem     | ds-font-size16    | `text-base`    | Base text size (16px)                          |
+| `font.size.20`   | 1.25rem  | ds-font-size20    | `text-lg`      | Large text size (20px)                         |
+| `font.size.24`   | 1.5rem   | ds-font-size24    | `text-xl`      | Extra large text size (24px)                   |
+| `font.size.28`   | 1.75rem  | ds-font-size28    | `text-2xl`     | Double extra large text size (28px)            |
+| `font.size.32`   | 2rem     | ds-font-size32    | `text-3xl`     | Triple extra large text size (32px)            |
+
 ## Font Family
 
 | Token                       | Value                                                                                                                 | Tailwind Class       | Usage                                               |
@@ -527,26 +543,24 @@ Total tokens: 453
 
 ## Typography Styles (`--leading-<number> = line-height: calc(var(--spacing) * <number>)`)
 
-| Token                  | Value                                                                                                                                            | Tailwind Class                               | Usage                                                                                                                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `font.body`            | normal 400 0.875rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif | `text-sm font-normal font-sans`              | Short text, such as descriptions in flags, or labels in buttons. The default size for text in components, and short content. |
-| `font.body.small`      | normal 400 0.75rem/1rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-xs font-normal font-sans`              | Secondary level content such as fine print or semantic messaging. Use sparingly.                                             |
-| `font.body.large`      | normal 400 1rem/1.5rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif      | `text-base font-normal font-sans`            | Long-form content such as blogs. The default size for reading text in long paragraphs.                                       |
-| `font.heading.xxsmall` | normal 653 0.75rem/1rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-xs font-bold font-sans`                | Headers in fine print or tight spaces. Use sparingly.                                                                        |
-| `font.heading.xsmall`  | normal 653 0.875rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif | `text-sm font-bold font-sans`                | Headers in small components where space is limited, such as flags.                                                           |
-| `font.heading.small`   | normal 653 1rem/1.25remx "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif    | `text-base font-bold font-sans`              | Headers in small components where space is limited, such as flags.                                                           |
-| `font.heading.medium`  | normal 653 1.25rem/1.5rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif   | `text-lg font-bold font-sans`                | Headers in large components, such as modal dialogs.                                                                          |
-| `font.heading.large`   | normal 653 1.5rem/1.75rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif   | `text-xl font-bold font-sans`                | Product page titles such as forms.                                                                                           |
-| `font.heading.xlarge`  | normal 653 1.75rem/2rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-2xl font-bold font-sans`               | Brand and marketing content.                                                                                                 |
-| `font.heading.xxlarge` | normal 653 2rem/2.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-3xl font-bold font-sans`               | Brand and marketing content.                                                                                                 |
-| `font.metric.large`    | normal 653 1.75rem/2rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-2xl font-bold font-sans`               | Use to emphasize a number within a large donut.                                                                              |
-| `font.metric.medium`   | normal 653 1.5rem/1.75rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif   | `text-xl font-bold font-sans`                | Use to emphasize a number within a medium donut.                                                                             |
-| `font.metric.small`    | normal 653 1rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-base font-bold font-sans`              | Use to emphasize a number and words in single-value tiles, or small donuts.                                                  |
-| `font.code`            | normal 400 0.875em/1 "Atlassian Mono", ui-monospace, Menlo, "Segoe UI Mono", "Ubuntu Mono", monospace                                            | `text-sm font-normal leading-none font-mono` | For use in code block only.                                                                                                  |
+| Token                  | Value                                                                                                                                            | Tailwind Class                                   | Usage                                                                                                                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `font.body`            | normal 400 0.875rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif | `text-sm font-normal leading-snug font-sans`     | Short text, such as descriptions in flags, or labels in buttons. The default size for text in components, and short content. |
+| `font.body.small`      | normal 400 0.75rem/1rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-xs font-normal leading-tight font-sans`    | Secondary level content such as fine print or semantic messaging. Use sparingly.                                             |
+| `font.body.large`      | normal 400 1rem/1.5rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif      | `text-base font-normal leading-normal font-sans` | Long-form content such as blogs. The default size for reading text in long paragraphs.                                       |
+| `font.heading.xxsmall` | normal 653 0.75rem/1rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-xs font-bold leading-tight font-sans`      | Headers in fine print or tight spaces. Use sparingly.                                                                        |
+| `font.heading.xsmall`  | normal 653 0.875rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif | `text-sm font-bold leading-snug font-sans`       | Headers in small components where space is limited, such as flags.                                                           |
+| `font.heading.small`   | normal 653 1rem/1.25remx "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif    | `text-base font-bold leading-snug font-sans`     | Headers in small components where space is limited, such as flags.                                                           |
+| `font.heading.medium`  | normal 653 1.25rem/1.5rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif   | `text-lg font-bold leading-normal font-sans`     | Headers in large components, such as modal dialogs.                                                                          |
+| `font.heading.large`   | normal 653 1.5rem/1.75rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif   | `text-xl font-bold leading-relaxed font-sans`    | Product page titles such as forms.                                                                                           |
+| `font.heading.xlarge`  | normal 653 1.75rem/2rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-2xl font-bold leading-loose font-sans`     | Brand and marketing content.                                                                                                 |
+| `font.heading.xxlarge` | normal 653 2rem/2.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-3xl font-bold leading-[2.25rem] font-sans` | Brand and marketing content.                                                                                                 |
+| `font.metric.large`    | normal 653 1.75rem/2rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-2xl font-bold leading-loose font-sans`     | Use to emphasize a number within a large donut.                                                                              |
+| `font.metric.medium`   | normal 653 1.5rem/1.75rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif   | `text-xl font-bold leading-relaxed font-sans`    | Use to emphasize a number within a medium donut.                                                                             |
+| `font.metric.small`    | normal 653 1rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif     | `text-base font-bold leading-snug font-sans`     | Use to emphasize a number and words in single-value tiles, or small donuts.                                                  |
+| `font.code`            | normal 400 0.875em/1 "Atlassian Mono", ui-monospace, Menlo, "Segoe UI Mono", "Ubuntu Mono", monospace                                            | `text-sm font-normal leading-none font-mono`     | For use in code block only.                                                                                                  |
 
-## Custom Design Tokens
-
-### Border Radius
+## Border Radius
 
 | Token                  | Value | Base Token   | Tailwind Class  | Usage                    |
 | ---------------------- | ----- | ------------ | --------------- | ------------------------ |
@@ -560,37 +574,62 @@ Total tokens: 453
 | `border.radius.400`    | 16px  | radius400    | `rounded-2xl`   | Bigger modals/containers |
 | `border.radius.circle` | 50%   | radiuscircle | `rounded-full`  | Circular elements        |
 
-### Border Widths
+## Border Widths
 
 | Token                  | Value | Tailwind Class | Usage               |
 | ---------------------- | ----- | -------------- | ------------------- |
 | `border.width`         | 1px   | `border`       | Default width       |
 | `border.width.outline` | 2px   | `border-2`     | Focus/active states |
 
-### Motion Duration
+## Line Height Tokens
 
-| Token                         | Value | Tailwind Class | Usage                               |
-| ----------------------------- | ----- | -------------- | ----------------------------------- |
-| `motion.duration.none`        | 0ms   | `duration-0`   | No transition                       |
-| `motion.duration.small`       | 100ms | `duration-100` | Enter transition (fast)             |
-| `motion.duration.medium`      | 350ms | `duration-350` | Enter transition (moderate/default) |
-| `motion.duration.large`       | 700ms | `duration-700` | Enter transition (slow)             |
-| `motion.duration.exit.small`  | 50ms  | `duration-50`  | Exit transition (fast)              |
-| `motion.duration.exit.medium` | 175ms | `duration-175` | Exit transition (moderate)          |
-| `motion.duration.exit.large`  | 350ms | `duration-350` | Exit transition (slow)              |
+| Token            | Value          | Tailwind Class      | Usage                                                       |
+| ---------------- | -------------- | ------------------- | ----------------------------------------------------------- |
+| `line.height.1`  | 1              | `leading-none`      | Height of a line box will be exactly equal to the font-size |
+| `line.height.16` | 1rem (16px)    | `leading-tight`     | Line height for small text, 16px                            |
+| `line.height.20` | 1.25rem (20px) | `leading-snug`      | Line height for body text, 20px                             |
+| `line.height.24` | 1.5rem (24px)  | `leading-normal`    | Line height for body large text, 24px                       |
+| `line.height.28` | 1.75rem (28px) | `leading-relaxed`   | Line height for headings, 28px                              |
+| `line.height.32` | 2rem (32px)    | `leading-loose`     | Line height for large headings, 32px                        |
+| `line.height.36` | 2.25rem (36px) | `leading-[2.25rem]` | Line height for extra large headings, 36px                  |
 
-### Motion Easing
+## Letter Spacing Tokens
 
-| Token                | Value                        | Tailwind Class | Usage                                                   |
-| -------------------- | ---------------------------- | -------------- | ------------------------------------------------------- |
-| `motion.ease.in-out` | `cubic-bezier(0.15,1,0.3,1)` | `ease-in-out`  | Natural entrance & exit (default base)                  |
-| `motion.ease.out`    | `cubic-bezier(0.2,0,0,1)`    | `ease-out`     | Starts quicky and then slows down at the end (entrance) |
-| `motion.ease.in`     | `cubic-bezier(0.8,0,0,0.8)`  | `ease-in`      | Start slowly and then speeds up at the end (exit)       |
-| `motion.linear`      | `cubic-bezier(0,0,1,1)`      | `ease-linear`  | Constant speed motion                                   |
+| Token                | Value    | Tailwind Class        | Usage                                                       |
+| -------------------- | -------- | --------------------- | ----------------------------------------------------------- |
+| `letter.spacing.0`   | 0        | `tracking-normal`     | Normal letter spacing, no adjustment                        |
+| `letter.spacing.100` | -0.003em | `tracking-tight`      | Slightly tighter letter spacing for improved readability    |
+| `letter.spacing.200` | -0.006em | `tracking-tighter`    | Moderately tighter letter spacing for dense text layouts    |
+| `letter.spacing.300` | -0.008em | `tracking-[-0.008em]` | Tighter letter spacing for headings and emphasized text     |
+| `letter.spacing.400` | -0.01em  | `tracking-[-0.01em]`  | Tightest letter spacing for large headings and display text |
 
-### Animation
+## Motion Duration
 
-#### Slide Animations
+| Token                  | Value | Tailwind Class | Usage                               |
+| ---------------------- | ----- | -------------- | ----------------------------------- |
+| `duration.none`        | 0ms   | `duration-0`   | No transition                       |
+| `duration.small`       | 100ms | `duration-100` | Enter transition (fast)             |
+| `duration.medium`      | 350ms | `duration-350` | Enter transition (moderate/default) |
+| `duration.large`       | 700ms | `duration-700` | Enter transition (slow)             |
+| `duration.exit.small`  | 50ms  | `duration-50`  | Exit transition (fast)              |
+| `duration.exit.medium` | 175ms | `duration-175` | Exit transition (moderate)          |
+| `duration.exit.large`  | 350ms | `duration-350` | Exit transition (slow)              |
+
+## Motion Easing
+
+| Token            | Value                        | Tailwind Class                   | Usage                                                    |
+| ---------------- | ---------------------------- | -------------------------------- | -------------------------------------------------------- |
+| `ease.in.out`    | `cubic-bezier(0.15,1,0.3,1)` | `ease-in-out`                    | Natural entrance & exit (default base)                   |
+| `ease.out`       | `cubic-bezier(0.2,0,0,1)`    | `ease-out`                       | Starts quickly and then slows down at the end (entrance) |
+| `ease.in`        | `cubic-bezier(0.8,0,0,0.8)`  | `ease-in`                        | Start slowly and then speeds up at the end (exit)        |
+| `ease.in.40.out` | `cubic-bezier(0.4,0,0,1)`    | `ease-[cubic-bezier(0.4,0,0,1)]` | Moderate ease-in start with ease-out end                 |
+| `ease.in.60.out` | `cubic-bezier(0.6,0,0,1)`    | `ease-[cubic-bezier(0.6,0,0,1)]` | Strong ease-in start with ease-out end                   |
+| `ease.in.80.out` | `cubic-bezier(0.8,0,0,1)`    | `ease-[cubic-bezier(0.8,0,0,1)]` | Very strong ease-in start with ease-out end              |
+| `ease.linear`    | `cubic-bezier(0,0,1,1)`      | `ease-linear`                    | Constant speed motion                                    |
+
+## Animation
+
+### Slide Animations
 
 | Token                             | Value                                                                       | Tailwind Class                 | Description                                    |
 | --------------------------------- | --------------------------------------------------------------------------- | ------------------------------ | ---------------------------------------------- |
@@ -607,7 +646,7 @@ Total tokens: 453
 | `animation.slide.in.right.small`  | `slide-in-from-right var(--motion-duration-small) var(--motion-ease-out)`   | `animate-slide-in-right-fast`  | Element slides in from right side (fast)       |
 | `animation.slide.in.right.large`  | `slide-in-from-right var(--motion-duration-large) var(--motion-ease-out)`   | `animate-slide-in-right-slow`  | Element slides in from right side (slow)       |
 
-#### Exit Animations
+### Exit Animations
 
 | Token                              | Value                                                                          | Tailwind Class                  | Description                         |
 | ---------------------------------- | ------------------------------------------------------------------------------ | ------------------------------- | ----------------------------------- |
@@ -624,7 +663,7 @@ Total tokens: 453
 | `animation.slide.out.right.small`  | `slide-out-to-right var(--motion-duration-exit-small) var(--motion-ease-in)`   | `animate-slide-out-right-fast`  | Element slides right and out (fast) |
 | `animation.slide.out.right.large`  | `slide-out-to-right var(--motion-duration-exit-large) var(--motion-ease-in)`   | `animate-slide-out-right-slow`  | Element slides right and out (slow) |
 
-#### Fade Animations
+### Fade Animations
 
 | Token                      | Value                                                               | Tailwind Class          | Description                       |
 | -------------------------- | ------------------------------------------------------------------- | ----------------------- | --------------------------------- |
@@ -635,7 +674,7 @@ Total tokens: 453
 | `animation.fade.out.small` | `fade-out var(--motion-duration-exit-small) var(--motion-ease-in)`  | `animate-fade-out-fast` | Element fades out smoothly (fast) |
 | `animation.fade.out.large` | `fade-out var(--motion-duration-exit-large) var(--motion-ease-in)`  | `animate-fade-out-slow` | Element fades out smoothly (slow) |
 
-#### Zoom Animations
+### Zoom Animations
 
 | Token                      | Value                                                               | Tailwind Class          | Description                                 |
 | -------------------------- | ------------------------------------------------------------------- | ----------------------- | ------------------------------------------- |
@@ -646,7 +685,7 @@ Total tokens: 453
 | `animation.zoom.out.small` | `zoom-out var(--motion-duration-exit-small) var(--motion-ease-in)`  | `animate-zoom-out-fast` | Element scales down from 100% to 95% (fast) |
 | `animation.zoom.out.large` | `zoom-out var(--motion-duration-exit-large) var(--motion-ease-in)`  | `animate-zoom-out-slow` | Element scales down from 100% to 95% (slow) |
 
-#### Shrink Animations
+### Shrink Animations
 
 | Token                        | Value                                                                 | Tailwind Class            | Description                                |
 | ---------------------------- | --------------------------------------------------------------------- | ------------------------- | ------------------------------------------ |
@@ -654,7 +693,7 @@ Total tokens: 453
 | `animation.shrink.out.small` | `shrink-out var(--motion-duration-exit-small) var(--motion-ease-in)`  | `animate-shrink-out-fast` | Element shrinks to 0px width/height (fast) |
 | `animation.shrink.out.large` | `shrink-out var(--motion-duration-exit-large) var(--motion-ease-in)`  | `animate-shrink-out-slow` | Element shrinks to 0px width/height (slow) |
 
-#### Staggered Animations
+### Staggered Animations
 
 | Token                          | Value                                                               | Tailwind Class              | Description                                            |
 | ------------------------------ | ------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
@@ -662,7 +701,7 @@ Total tokens: 453
 | `animation.staggered.in.small` | `staggered-in var(--motion-duration-small) var(--motion-ease-out)`  | `animate-staggered-in-fast` | Element enters with staggered delay (grid-based, fast) |
 | `animation.staggered.in.large` | `staggered-in var(--motion-duration-large) var(--motion-ease-out)`  | `animate-staggered-in-slow` | Element enters with staggered delay (grid-based, slow) |
 
-#### Customize Theme
+## Customize Theme
 
 ```css
 @import "tailwindcss";

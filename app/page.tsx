@@ -10,6 +10,7 @@ import NavigationPage from "@/registry/ads/blocks/navigation-page";
 import ButtonPage from "@/registry/ads/blocks/button-page";
 import IconsPage from "@/registry/ads/blocks/icons-page";
 import InputPage from "@/registry/ads/blocks/input-page";
+import BadgePage from "@/registry/ads/blocks/badge-page";
 
 export default function Home() {
   return (
@@ -65,6 +66,16 @@ export default function Home() {
           </div>
           <div className="relative flex flex-1 items-start justify-start">
             <IconsPage />
+          </div>
+        </section>
+
+        {/* Badges */}
+        <section className="border-slate-200a relative flex flex-col gap-4 rounded-lg border p-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm text-slate-700">Badges</h2>
+          </div>
+          <div className="relative flex flex-1 items-start justify-start">
+            <BadgePage />
           </div>
         </section>
 

@@ -110,7 +110,7 @@
   --ds-lime900: #37471f;
   --ds-lime1000: #28311b;
 
-  /* Neutral Base Tokens (Light Mode) */
+  /* Neutral Base Tokens */
   --ds-neutralminus100: #ffffff; /* Custom */
   --ds-neutralminus100a: #ffffff08; /* Custom = 3% opacity */
   --ds-neutral0: #ffffff;
@@ -172,7 +172,6 @@
   --ds-size200: 3px;
 
   /* Border Radius Tokens */
-  /* --ds-radius0: 0; */
   --ds-radius050: 2px;
   --ds-radius075: 3px;
   --ds-radius100: 4px;
@@ -180,7 +179,6 @@
   --ds-radius200: 8px;
   --ds-radius300: 12px;
   --ds-radius400: 16px;
-  /* --ds-radiuscircle: 32032px; */
 
   /* Spacing Tokens */
   /* Positive Spacing */
@@ -211,54 +209,75 @@
   --ds-spacenegative400: -32px;
 
   /* Typography Tokens */
-  /* Font Size Tokens */
-  --ds-fontsizecode: 0.875em; /* 14px */
-  --ds-fontsize12: 0.75rem; /* 12px */
-  --ds-fontsize14: 0.875rem; /* 14px */
-  --ds-fontsize16: 1rem; /* 16px */
-  --ds-fontsize20: 1.25rem; /* 20px */
-  --ds-fontsize24: 1.5rem; /* 24px */
-  --ds-fontsize28: 1.75rem; /* 28px */
-  --ds-fontsize32: 2rem; /* 32px */
+  /* Font Shorthand Tokens */
+  --ds-font-heading-xxlarge: normal 653 2rem/2.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-heading-xlarge: normal 653 1.75rem/2rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-heading-large: normal 653 1.5rem/1.75rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-heading-medium: normal 653 1.25rem/1.5rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-heading-small: normal 653 1rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-heading-xsmall: normal 653 0.875rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-heading-xxsmall: normal 653 0.75rem/1rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
 
-  /* Font Weight Tokens */
-  --ds-fontweight400: 400;
-  --ds-fontweight500: 500;
-  --ds-fontweight600: 600;
-  --ds-fontweight653: 653; /* 653 is the font weight for bold */
+  --ds-font-body-large: normal 400 1rem/1.5rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-body: normal 400 0.875rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-body-small: normal 400 0.75rem/1rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+
+  --ds-font-metric-large: normal 653 1.75rem/2rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-metric-medium: normal 653 1.5rem/1.75rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-metric-small: normal 653 1rem/1.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+
+  --ds-font-code: normal 400 0.875em/1 "Atlassian Mono", ui-monospace, Menlo, "Segoe UI Mono", "Ubuntu Mono", monospace;
 
   /* Font Family Tokens */
-  --ds-fontfamilycharliedisplay: "Charlie Display", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
-  --ds-fontfamilycharlietext: "Charlie Text", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
-  --ds-fontfamilywebsans: "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
-  --ds-fontfamilywebmono: "Atlassian Mono", ui-monospace, Menlo, "Segoe UI Mono", "Ubuntu Mono", monospace;
-  --ds-fontfamilyiossans: SF Pro;
-  --ds-fontfamilyandroidsans: Roboto;
-  --ds-fontfamilyiosmono: SF Mono;
-  --ds-fontfamilyandroidmono: Roboto Mono;
+  --ds-font-family-heading: "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-family-body: "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-family-code: "Atlassian Mono", ui-monospace, Menlo, "Segoe UI Mono", "Ubuntu Mono", monospace;
+  --ds-font-family-brand-heading: "Charlie Display", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+  --ds-font-family-brand-body: "Charlie Text", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, "Helvetica Neue", sans-serif;
+
+  /* Font Size Tokens */
+  --ds-font-size-code: 0.875em; /* 14px */
+  --ds-font-size12: 0.75rem; /* 12px */
+  --ds-font-size14: 0.875rem; /* 14px */
+  --ds-font-size16: 1rem; /* 16px */
+  --ds-font-size20: 1.25rem; /* 20px */
+  --ds-font-size24: 1.5rem; /* 24px */
+  --ds-font-size28: 1.75rem; /* 28px */
+  --ds-font-size32: 2rem; /* 32px */
+
+  /* Font Weight Tokens */
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 653;
 
   /* Line Height Tokens */
-  --ds-lineheight1: 1; /* height of a line box will be exactly equal to the font-size */
-  --ds-lineheight16: 1rem; /* 16px */
-  --ds-lineheight20: 1.25rem; /* 20px */
-  --ds-lineheight24: 1.5rem; /* 24px */
-  --ds-lineheight28: 1.75rem; /* 28px */
-  --ds-lineheight32: 2rem; /* 32px */
-  --ds-lineheight36: 2.25rem; /* 36px */
+  --ds-line-height1: 1; /* height of a line box will be exactly equal to the font-size */
+  --ds-line-height16: 1rem; /* 16px */
+  --ds-line-height20: 1.25rem; /* 20px */
+  --ds-line-height24: 1.5rem; /* 24px */
+  --ds-line-height28: 1.75rem; /* 28px */
+  --ds-line-height32: 2rem; /* 32px */
+  --ds-line-height36: 2.25rem; /* 36px */
 
   /* Letter Spacing Tokens */
-  --ds-letterspacing0: 0;
-  --ds-letterspacing100: -0.003em;
-  --ds-letterspacing200: -0.006em;
-  --ds-letterspacing300: -0.008em;
-  --ds-letterspacing400: -0.01em;
+  --ds-letter-spacing0: 0;
+  --ds-letter-spacing100: -0.003em;
+  --ds-letter-spacing200: -0.006em;
+  --ds-letter-spacing300: -0.008em;
+  --ds-letter-spacing400: -0.01em;
 
-  /* Elevation Tokens (Light mode) */
+  /* Blanket Tokens */
+  --ds-blanket: #10121499;
+  --ds-blanket-danger: #e3493514;
+  --ds-blanket-selected: #357de814;
+
+  /* Elevation Tokens (Light Mode) */
   --ds-elevation-shadow-raised: 0 1px 1px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31);
   --ds-elevation-shadow-overflow: 0 0 8px rgba(9, 30, 66, 0.16), 0 0 1px rgba(9, 30, 66, 0.12);
   --ds-elevation-shadow-overlay: 0 8px 12px rgba(9, 30, 66, 0.15), 0 0 1px rgba(9, 30, 66, 0.31);
 
-  /* Elevation Tokens (Dark mode) */
+  /* Elevation Tokens (Dark Mode) */
   --ds-darkelevation-shadow-raised: 0 0 0 rgba(0, 0, 0, 0), 0 1px 1px rgba(3, 4, 4, 0.5), 0 0 1px rgba(3, 4, 4, 0.5);
   --ds-darkelevation-shadow-overflow: 0 0 12px rgba(3, 4, 4, 0.56), 0 0 1px rgba(3, 4, 4, 0.5);
   --ds-darkelevation-shadow-overlay: 0 0 0 rgba(57, 66, 74, 1), 0 8px 12px rgba(3, 4, 4, 0.36), 0 0 1px rgba(3, 4, 4, 0.5);
@@ -274,8 +293,25 @@
   --ds-z700: 700; /* Spotlight */
   --ds-z800: 800; /* Tooltip */
 
-  /* ADS Theming (Light mode) */
+  /* Motion Duration Tokens */
+  --ds-duration-none: 0ms;
+  --ds-duration-small: 100ms;
+  --ds-duration-medium: 350ms;
+  --ds-duration-large: 700ms;
+  --ds-duration-exit-small: 50ms;
+  --ds-duration-exit-medium: 175ms;
+  --ds-duration-exit-large: 350ms;
 
+  /* Motion Easing Tokens */
+  --ds-ease-in-out: cubic-bezier(0.15, 1, 0.3, 1);
+  --ds-ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ds-ease-in: cubic-bezier(0.8, 0, 0, 0.8);
+  --ds-ease-in-40-out: cubic-bezier(0.4, 0, 0, 1);
+  --ds-ease-in-60-out: cubic-bezier(0.6, 0, 0, 1);
+  --ds-ease-in-80-out: cubic-bezier(0.8, 0, 0, 1);
+  --ds-ease-linear: cubic-bezier(0, 0, 1, 1);
+
+  /* Theming Mapping */
   /* Blue Base Tokens */
   --blue100: var(--ds-blue100);
   --blue200: var(--ds-blue200);
@@ -384,7 +420,7 @@
   --lime900: var(--ds-lime900);
   --lime1000: var(--ds-lime1000);
 
-  /* Neutral Base Tokens (Light mode) */
+  /* Neutral Base Tokens (Light Mode) */
   --neutralminus100: var(--ds-neutralminus100); /* Custom */
   --neutralminus100a: var(--ds-neutralminus100a); /* Custom = 3% opacity */
   --neutral0: var(--ds-neutral0);
@@ -409,7 +445,7 @@
   --neutral1000: var(--ds-neutral1000);
   --neutral1100: var(--ds-neutral1100);
 
-  /* Neutral Base Tokens (Dark mode) */
+  /* Neutral Base Tokens (Dark Mode) */
   --darkneutralminus100: var(--ds-darkneutralminus100); /* Custom */
   --darkneutralminus100a: var(--ds-darkneutralminus100a); /* Custom = 3% opacity */
   --darkneutral0: var(--ds-darkneutral0);
@@ -433,164 +469,10 @@
   --darkneutral900: var(--ds-darkneutral900);
   --darkneutral1000: var(--ds-darkneutral1000);
   --darkneutral1100: var(--ds-darkneutral1100);
-
-  /* Elevation Tokens */
-  --elevation-shadow-raised: var(--ds-elevation-shadow-raised);
-  --elevation-shadow-overflow: var(--ds-elevation-shadow-overflow);
-  --elevation-shadow-overlay: var(--ds-elevation-shadow-overlay);
-
-  /* Shadcn Tokens */
-  --background: var(--ds-neutral0); /* Background color */
-  --foreground: var(--ds-neutral1000); /* Text color */
-
-  --card: var(--ds-neutral0);
-  --card-foreground: var(--ds-neutral1000);
-
-  --popover: var(--ds-neutral0);
-  --popover-foreground: var(--ds-neutral1000);
-
-  --primary: var(--ds-blue700);
-  --primary-foreground: var(--ds-neutral0);
-
-  --secondary: var(--ds-neutral0);
-  --secondary-foreground: var(--ds-neutral800);
-
-  --muted: var(--ds-neutral200);
-  --muted-foreground: var(--ds-neutral700);
-
-  --accent: var(--neutral200a); /* Hover state color */
-  --accent-foreground: var(--ds-neutral800);
-
-  --destructive: var(--ds-red700);
-
-  --border: var(--ds-neutral300a);
-  --input: var(--ds-neutral500); /* Shadcn input border color */
-  --ring: var(--ds-blue500);
-
-  --chart-1: var(--ds-teal600);
-  --chart-1-hovered: var(--ds-teal700);
-  --chart-2: var(--ds-purple800);
-  --chart-2-hovered: var(--ds-purple900);
-  --chart-3: var(--ds-orange600);
-  --chart-3-hovered: var(--ds-orange700);
-  --chart-4: var(--ds-magenta800);
-  --chart-4-hovered: var(--ds-magenta900);
-  --chart-5: var(--ds-blue900);
-  --chart-5-hovered: var(--ds-blue1000);
-  --chart-6: var(--ds-purple500);
-  --chart-6-hovered: var(--ds-purple600);
-  --chart-7: var(--ds-magenta900);
-  --chart-7-hovered: var(--ds-magenta1000);
-  --chart-8: var(--ds-orange800);
-  --chart-8-hovered: var(--ds-orange900);
-
-  --chart-gray-bold-hovered: var(--ds-neutral600);
-  --chart-gray-bolder: var(--ds-neutral600);
-  --chart-gray-bolder-hovered: var(--ds-neutral700);
-  --chart-neutral: var(--ds-neutral500);
-  --chart-neutral-hovered: var(--ds-neutral600);
-  --chart-yellow-boldest-hovered: var(--ds-yellow900);
-
-  --sidebar: var(--ds-neutral0); /* Background color */
-  --sidebar-foreground: var(--ds-neutral1000); /* Text color */
-  --sidebar-primary: var(--ds-blue700); /* Background color - Buttons in sidebar */
-  --sidebar-primary-foreground: var(--ds-neutral0); /* Text color - Buttons in sidebar */
-  --sidebar-accent: var(--ds-neutral400); /* Hover state color */
-  --sidebar-accent-foreground: var(--ds-neutral800); /* Hover state text color */
-  --sidebar-border: var(--ds-neutral300a); /* Border color */
-  --sidebar-ring: var(--ds-blue500); /* Focus state color */
-
-  /* Token Overrides */
-  /* ADS Light and dark mode tokens that don't map to each other */
-  --background-accent-blue-subtle: var(--ds-blue400);
-  --background-accent-blue-subtle-hovered: var(--ds-blue300);
-  --background-accent-blue-subtle-pressed: var(--ds-blue200);
-
-  --background-accent-gray-subtle-pressed: var(--ds-neutral300);
-  --background-accent-gray-subtler: var(--ds-neutral300);
-  --background-accent-gray-subtler-hovered: var(--ds-neutral400);
-  --background-accent-gray-subtler-pressed: var(--ds-neutral500);
-  --background-accent-gray-subtlest: var(--ds-neutral200);
-  --background-accent-gray-subtlest-hovered: var(--ds-neutral300);
-
-  --background-accent-green-subtle: var(--ds-green400);
-  --background-accent-green-subtle-hovered: var(--ds-green300);
-  --background-accent-green-subtle-pressed: var(--ds-green200);
-
-  --background-accent-lime-subtle: var(--ds-lime400);
-  --background-accent-lime-subtle-hovered: var(--ds-lime300);
-  --background-accent-lime-subtle-pressed: var(--ds-lime200);
-
-  --background-accent-magenta-subtle: var(--ds-magenta400);
-  --background-accent-magenta-subtle-hovered: var(--ds-magenta300);
-  --background-accent-magenta-subtle-pressed: var(--ds-magenta200);
-
-  --background-accent-orange-subtle: var(--ds-orange400);
-  --background-accent-orange-subtle-hovered: var(--ds-orange300);
-  --background-accent-orange-subtle-pressed: var(--ds-orange200);
-
-  --background-accent-purple-subtle: var(--ds-purple400);
-  --background-accent-purple-subtle-hovered: var(--ds-purple300);
-  --background-accent-purple-subtle-pressed: var(--ds-purple200);
-
-  --background-accent-red-subtle: var(--ds-red400);
-  --background-accent-red-subtle-hovered: var(--ds-red300);
-  --background-accent-red-subtle-pressed: var(--ds-red200);
-
-  --background-accent-teal-subtle: var(--ds-teal400);
-  --background-accent-teal-subtle-hovered: var(--ds-teal300);
-  --background-accent-teal-subtle-pressed: var(--ds-teal200);
-
-  --background-accent-yellow-subtle-hovered: var(--ds-yellow400);
-  --background-accent-yellow-subtle-pressed: var(--ds-yellow500);
-
-  --background-inverse-subtle: #00000029;
-  --background-inverse-subtle-hovered: #0000003d;
-  --background-inverse-subtle-pressed: #00000052;
-
-  --background-warning-bold: var(--ds-yellow300);
-  --background-warning-bold-hovered: var(--ds-yellow400);
-  --background-warning-bold-pressed: var(--ds-yellow500);
-
-  --text: var(--neutral1000);
-  --text-inverse: var(--neutral0);
-
-  --icon-accent-red: var(--ds-red700);
-  --icon-accent-yellow: var(--ds-yellow600);
-  --icon-danger: var(--ds-red700);
-  --icon-inverse: var(--ds-neutral0);
-  --icon-warning: var(--ds-orange600);
-
-  --border-focused: var(--ds-blue500);
-  --border-input: var(--ds-neutral500);
-  --border-warning: var(--ds-orange600);
-
-  --interaction-hovered: #00000029;
-  --interaction-pressed: #00000052;
-
-  --blanket: var(--ds-neutral500a);
-  --blanket-danger: #ef5c4814;
-  --blanket-selected: #4688ec14;
-
-  --elevation-surface: var(--ds-neutral0);
-  --elevation-surface-pressed: var(--ds-neutral300);
-  --elevation-surface-overlay: var(--ds-neutral0);
-  --elevation-surface-overlay-hovered: var(--ds-neutral200);
-  --elevation-surface-overlay-pressed: var(--ds-neutral300);
-  --elevation-surface-raised: var(--ds-neutral0);
-  --elevation-surface-raised-hovered: var(--ds-neutral200);
-  --elevation-surface-sunken: var(--ds-neutral100);
-
-  --utility-elevation-surface-current: var(--ds-neutral0);
-
-  /* --input: var(--ds-neutral0); */
-  --input-hovered: var(--ds-neutral00);
-  --input-pressed: var(--ds-neutral0);
 }
 
 .dark {
-  /* ADS Theming (Dark mode) */
-
+  /* Theming Mapping */
   /* Blue Base Tokens */
   --blue100: var(--ds-blue1000);
   --blue200: var(--ds-blue900);
@@ -699,7 +581,7 @@
   --lime900: var(--ds-lime200);
   --lime1000: var(--ds-lime100);
 
-  /* Neutral Base Tokens (Light mode inverse) */
+  /* Neutral Base Tokens (Light Mode inverse) */
   --neutralminus100: var(--ds-darkneutralminus100);
   --neutralminus100a: var(--ds-darkneutralminus100a);
   --neutral0: var(--ds-darkneutral0);
@@ -724,7 +606,7 @@
   --neutral1000: var(--ds-darkneutral1000);
   --neutral1100: var(--ds-darkneutral1100);
 
-  /* Neutral Base Tokens (Dark mode inverse) */
+  /* Neutral Base Tokens (Dark Mode inverse) */
   --darkneutralminus100: var(--ds-neutralminus100);
   --darkneutralminus100a: var(--ds-neutralminus100a);
   --darkneutral0: var(--ds-neutral0);
@@ -753,151 +635,4 @@
   --elevation-shadow-raised: var(--ds-darkelevation-shadow-raised);
   --elevation-shadow-overflow: var(--ds-darkelevation-shadow-overflow);
   --elevation-shadow-overlay: var(--ds-darkelevation-shadow-overlay);
-
-  /* Shadcn Tokens */
-  --background: var(--ds-darkneutral100);
-  --foreground: var(--ds-darkneutral900);
-
-  --card: var(--ds-darkneutral200);
-  --card-foreground: var(--ds-darkneutral900);
-
-  --popover: var(--ds-darkneutral250);
-  --popover-foreground: var(--ds-darkneutral900);
-
-  --primary: var(--blue400);
-  --primary-foreground: var(--ds-darkneutral0);
-
-  --secondary: var(--ds-darkneutral100);
-  --secondary-foreground: var(--ds-darkneutral800);
-
-  --muted: var(--ds-darkneutral300);
-  --muted-foreground: var(--ds-darkneutral700);
-
-  --accent: var(--ds-darkneutral200a);
-  --accent-foreground: var(--ds-darkneutral800);
-
-  --destructive: var(--ds-red400);
-
-  --border: var(--ds-darkneutral300a);
-  --input: var(--ds-darkneutral600);
-  --ring: var(--ds-blue300);
-
-  --chart-1: var(--ds-teal600);
-  --chart-1-hovered: var(--ds-teal500);
-  --chart-2: var(--ds-purple300);
-  --chart-2-hovered: var(--ds-purple200);
-  --chart-3: var(--ds-orange600);
-  --chart-3-hovered: var(--ds-orange500);
-  --chart-4: var(--ds-magenta300);
-  --chart-4-hovered: var(--ds-magenta200);
-  --chart-5: var(--ds-blue200);
-  --chart-5-hovered: var(--ds-blue100);
-  --chart-6: var(--ds-purple600);
-  --chart-6-hovered: var(--ds-purple500);
-  --chart-7: var(--ds-magenta200);
-  --chart-7-hovered: var(--ds-magenta100);
-  --chart-8: var(--ds-orange300);
-  --chart-8-hovered: var(--ds-orange200);
-
-  --chart-gray-bold-hovered: var(--ds-darkneutral700);
-  --chart-gray-bolder: var(--ds-darkneutral700);
-  --chart-gray-bolder-hovered: var(--ds-darkneutral800);
-  --chart-neutral: var(--ds-darkneutral600);
-  --chart-neutral-hovered: var(--ds-darkneutral700);
-  --chart-yellow-boldest-hovered: var(--ds-yellow300);
-
-  --sidebar: var(--ds-darkneutral0);
-  --sidebar-foreground: var(--ds-darkneutral1000);
-  --sidebar-primary: var(--ds-blue400);
-  --sidebar-primary-foreground: var(--ds-darkneutral0);
-  --sidebar-accent: var(--ds-darkneutral400);
-  --sidebar-accent-foreground: var(--ds-darkneutral800);
-  --sidebar-border: var(--ds-darkneutral300a);
-  --sidebar-ring: var(--ds-blue300);
-
-  /* Token Overrides */
-  --background-accent-blue-subtle: var(--ds-blue800);
-  --background-accent-blue-subtle-hovered: var(--ds-blue900);
-  --background-accent-blue-subtle-pressed: var(--ds-blue1000);
-
-  --background-accent-gray-subtle-pressed: var(--ds-darkneutral350);
-  --background-accent-gray-subtler: var(--ds-darkneutral400);
-  --background-accent-gray-subtler-hovered: var(--ds-darkneutral500);
-  --background-accent-gray-subtler-pressed: var(--ds-darkneutral600);
-  --background-accent-gray-subtlest: var(--ds-darkneutral300);
-  --background-accent-gray-subtlest-hovered: var(--ds-darkneutral350);
-
-  --background-accent-green-subtle: var(--ds-green800);
-  --background-accent-green-subtle-hovered: var(--ds-green900);
-  --background-accent-green-subtle-pressed: var(--ds-green1000);
-
-  --background-accent-lime-subtle: var(--ds-lime800);
-  --background-accent-lime-subtle-hovered: var(--ds-lime900);
-  --background-accent-lime-subtle-pressed: var(--ds-lime1000);
-
-  --background-accent-magenta-subtle: var(--ds-magenta800);
-  --background-accent-magenta-subtle-hovered: var(--ds-magenta900);
-  --background-accent-magenta-subtle-pressed: var(--ds-magenta1000);
-
-  --background-accent-orange-subtle: var(--ds-orange800);
-  --background-accent-orange-subtle-hovered: var(--ds-orange900);
-  --background-accent-orange-subtle-pressed: var(--ds-orange1000);
-
-  --background-accent-purple-subtle: var(--ds-purple800);
-  --background-accent-purple-subtle-hovered: var(--ds-purple900);
-  --background-accent-purple-subtle-pressed: var(--ds-purple1000);
-
-  --background-accent-red-subtle: var(--ds-red800);
-  --background-accent-red-subtle-hovered: var(--ds-red900);
-  --background-accent-red-subtle-pressed: var(--ds-red1000);
-
-  --background-accent-teal-subtle: var(--ds-teal800);
-  --background-accent-teal-subtle-hovered: var(--ds-teal900);
-  --background-accent-teal-subtle-pressed: var(--ds-teal1000);
-
-  --background-accent-yellow-subtle-hovered: var(--ds-yellow900);
-  --background-accent-yellow-subtle-pressed: var(--ds-yellow1000);
-
-  --background-inverse-subtle: #ffffff29;
-  --background-inverse-subtle-hovered: #ffffff3d;
-  --background-inverse-subtle-pressed: #ffffff52;
-
-  --background-warning-bold: var(--ds-yellow300);
-  --background-warning-bold-hovered: var(--ds-yellow400);
-  --background-warning-bold-pressed: var(--ds-yellow500);
-
-  --text: var(--ds-darkneutral900);
-  --text-inverse: var(--ds-darkneutral100);
-
-  --icon-accent-red: var(--ds-red600);
-  --icon-accent-yellow: var(--ds-yellow300);
-  --icon-danger: var(--ds-red500);
-  --icon-inverse: var(--ds-darkneutral100);
-  --icon-warning: var(--ds-yellow300);
-
-  --border-focused: var(--ds-blue300);
-  --border-input: var(--ds-darkneutral600);
-  --border-warning: var(--ds-yellow500);
-
-  --interaction-hovered: #ffffff33;
-  --interaction-pressed: #ffffff5c;
-
-  --blanket: #10121499;
-  --blanket-danger: #e3493514;
-  --blanket-selected: #357de814;
-
-  --elevation-surface: var(--ds-darkneutral100);
-  --elevation-surface-pressed: var(--ds-darkneutral250);
-  --elevation-surface-overlay: var(--ds-darkneutral250);
-  --elevation-surface-overlay-hovered: var(--ds-darkneutral300);
-  --elevation-surface-overlay-pressed: var(--ds-darkneutral350);
-  --elevation-surface-raised: var(--ds-darkneutral200);
-  --elevation-surface-raised-hovered: var(--ds-darkneutral250);
-  --elevation-surface-sunken: var(--ds-darkneutral0);
-
-  --utility-elevation-surface-current: var(--ds-darkneutral100);
-
-  /* --input: var(--ds-darkneutral200); */
-  --input-hovered: var(--ds-darkneutral250);
-  --input-pressed: var(--ds-darkneutral200);
 }
