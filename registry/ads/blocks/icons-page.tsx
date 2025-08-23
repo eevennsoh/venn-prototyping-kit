@@ -18,41 +18,41 @@ const SettingsIcon = IconWrapper(SettingsIconCore);
 
 function IconsShowcase() {
   return (
-    <div className="flex h-full flex-col gap-6 p-4">
+    <div className="flex h-full flex-col gap-6">
       {/* Appearance */}
       <div className="space-y-4">
-        <h3 className="font-semibold">Appearance</h3>
+        <h3>Appearance</h3>
         <div className="flex flex-wrap items-center gap-4">
-          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
             <AddIcon appearance="default" label="Add" />
-            <span className="text-muted-foreground text-xs">default</span>
+            <span className="font-body-small text-text-subtlest">default</span>
           </div>
-          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
             <AddIcon appearance="subtle" label="Add" />
-            <span className="text-muted-foreground text-xs">subtle</span>
+            <span className="font-body-small text-text-subtlest">subtle</span>
           </div>
-          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
             <AddIcon appearance="subtlest" label="Add" />
-            <span className="text-muted-foreground text-xs">subtlest</span>
+            <span className="font-body-small text-text-subtlest">subtlest</span>
           </div>
-          <div className="bg-dark-slate-100 flex flex-col items-start gap-1 rounded-sm p-2">
+          <div className="flex flex-col items-start gap-1 rounded-sm bg-(--darkneutral100) p-2">
             <AddIcon appearance="inverse" label="Add" />
-            <span className="text-muted-foreground text-text-inverse text-xs">inverse</span>
+            <span className="font-body-small text-text-inverse">inverse</span>
           </div>
         </div>
       </div>
 
       {/* Sizes */}
       <div className="space-y-4">
-        <h3 className="font-semibold">Sizes</h3>
+        <h3>Sizes</h3>
         <div className="flex flex-wrap items-center gap-4">
-          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
             <SearchIcon size="medium" label="Search" />
-            <span className="text-muted-foreground text-xs">medium (16px)</span>
+            <span className="font-body-small text-text-subtlest">medium (16px)</span>
           </div>
-          <div className="flex flex-col items-start gap-1 rounded-sm border p-2">
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
             <SearchIcon size="small" label="Search" />
-            <span className="text-muted-foreground text-xs">small (12px)</span>
+            <span className="font-body-small text-text-subtlest">small (12px)</span>
           </div>
         </div>
       </div>

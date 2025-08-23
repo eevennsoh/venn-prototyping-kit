@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ads/ui/button";
 import { IconWrapper } from "@/registry/ads/lib/icon-wrapper";
 
 import ThemeIconCore from "@atlaskit/icon/core/theme";

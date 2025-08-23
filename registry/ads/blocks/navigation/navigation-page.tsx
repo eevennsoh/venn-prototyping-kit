@@ -1,4 +1,4 @@
-import Navigation from "@/registry/ads/components/navigation";
+import Navigation from "@/registry/ads/blocks/navigation/navigation";
 
 export default function NavigationPage() {
   return <Navigation />;

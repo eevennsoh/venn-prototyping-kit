@@ -10,12 +10,12 @@ type LogoAppearance = "brand" | "neutral" | "inverse";
 const logoVariants = cva("inline-flex items-center", {
   variants: {
     size: {
-      xxsmall: "",
-      xsmall: "",
-      small: "",
-      medium: "",
-      large: "",
-      xlarge: "",
+      xxsmall: "" /* 12px */,
+      xsmall: "" /* 16px */,
+      small: "" /* 20px */,
+      medium: "" /* 24px */,
+      large: "" /* 32px */,
+      xlarge: "" /* 40px */,
     },
     appearance: {
       brand: "",
@@ -51,7 +51,7 @@ export function LogoWrapper(IconComponent: ComponentType<AtlaskitLogoProps>, Log
     const Component = showText ? LogoComponent : IconComponent;
 
     return (
-      <span data-slot="logo" className={cn(logoVariants({ size, appearance }))}>
+      <span data-slot="logo" data-appearance={appearance} className={cn(logoVariants({ size, appearance }))}>
         <Component {...sharedProps} />
       </span>
     );

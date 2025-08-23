@@ -1,7 +1,7 @@
-@import "./ads-tokens.css";
-@import "./ads-theme.css";
-@import "./tailwind-theme.css";
-@import "./shadcn-theme.css";
+@import "./css/ads-tokens.css";
+@import "./css/ads-theme.css";
+@import "./css/tailwind-theme.css";
+@import "./css/shadcn-theme.css";
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -517,7 +517,6 @@
     -ms-overflow-style: -ms-autohiding-scrollbar;
     text-decoration-skip-ink: auto;
   }
-
   /* Links */
   a {
     color: var(--link);
@@ -573,111 +572,114 @@
     color: var(--text);
   }
 
-  /* SVG Logo Text Color */
-  svg {
-    --text-color: var(--text-accent-gray-bolder);
+  /* Logo Text Color Theming */
+  [data-slot="logo"][data-appearance="inverse"] svg {
+    --text-color: var(--darkneutral1100);
   }
 
-  /* Typography Styles */
-  @layer components {
-    .font-heading-xxlarge {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size32);
-      line-height: var(--ds-line-height36);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-heading-xlarge {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size28);
-      line-height: var(--ds-line-height32);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-heading-large {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size24);
-      line-height: var(--ds-line-height28);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-heading-medium {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size20);
-      line-height: var(--ds-line-height24);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-heading-small {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size16);
-      line-height: var(--ds-line-height20);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-heading-xsmall {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size14);
-      line-height: var(--ds-line-height20);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-heading-xxsmall {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size12);
-      line-height: var(--ds-line-height16);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-body-large {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-regular);
-      font-size: var(--ds-font-size16);
-      line-height: var(--ds-line-height24);
-      font-family: var(--ds-font-family-body);
-    }
-    .font-body {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-regular);
-      font-size: var(--ds-font-size14);
-      line-height: var(--ds-line-height20);
-      font-family: var(--ds-font-family-body);
-    }
-    .font-body-small {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-regular);
-      font-size: var(--ds-font-size12);
-      line-height: var(--ds-line-height16);
-      font-family: var(--ds-font-family-body);
-    }
+  [data-slot="logo"]:not([data-appearance="inverse"]) svg {
+    --text-color: var(--neutral1100);
+  }
+}
+/* Typography Styles */
+@layer components {
+  .font-heading-xxlarge {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size32);
+    line-height: var(--ds-line-height36);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-heading-xlarge {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size28);
+    line-height: var(--ds-line-height32);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-heading-large {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size24);
+    line-height: var(--ds-line-height28);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-heading-medium {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size20);
+    line-height: var(--ds-line-height24);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-heading-small {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size16);
+    line-height: var(--ds-line-height20);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-heading-xsmall {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size14);
+    line-height: var(--ds-line-height20);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-heading-xxsmall {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size12);
+    line-height: var(--ds-line-height16);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-body-large {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-regular);
+    font-size: var(--ds-font-size16);
+    line-height: var(--ds-line-height24);
+    font-family: var(--ds-font-family-body);
+  }
+  .font-body {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-regular);
+    font-size: var(--ds-font-size14);
+    line-height: var(--ds-line-height20);
+    font-family: var(--ds-font-family-body);
+  }
+  .font-body-small {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-regular);
+    font-size: var(--ds-font-size12);
+    line-height: var(--ds-line-height16);
+    font-family: var(--ds-font-family-body);
+  }
 
-    .font-metric-large {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size28);
-      line-height: var(--ds-line-height32);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-metric-medium {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size24);
-      line-height: var(--ds-line-height28);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-metric-small {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-bold);
-      font-size: var(--ds-font-size16);
-      line-height: var(--ds-line-height20);
-      font-family: var(--ds-font-family-heading);
-    }
-    .font-code {
-      font-style: normal;
-      font-weight: var(--ds-font-weight-regular);
-      font-size: var(--ds-font-size-code);
-      line-height: var(--ds-line-height1);
-      font-family: var(--ds-font-family-code);
-    }
+  .font-metric-large {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size28);
+    line-height: var(--ds-line-height32);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-metric-medium {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size24);
+    line-height: var(--ds-line-height28);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-metric-small {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-bold);
+    font-size: var(--ds-font-size16);
+    line-height: var(--ds-line-height20);
+    font-family: var(--ds-font-family-heading);
+  }
+  .font-code {
+    font-style: normal;
+    font-weight: var(--ds-font-weight-regular);
+    font-size: var(--ds-font-size-code);
+    line-height: var(--ds-line-height1);
+    font-family: var(--ds-font-family-code);
   }
 }

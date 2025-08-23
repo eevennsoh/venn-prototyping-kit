@@ -1,14 +1,13 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Badge, badgeVariants } from "@/components/ui/badge";
-import type { VariantProps } from "class-variance-authority";
+import { Badge } from "@/registry/ads/ui/badge";
 
 type RelativeTimeBadgeProps = {
   date: string | number | Date;
   prefix?: string;
   className?: string;
-} & VariantProps<typeof badgeVariants>;
+};
 
 function formatRelativeCompact(from: Date, to: Date): string {
   const diffSec = Math.round((from.getTime() - to.getTime()) / 1000);
@@ -34,7 +33,7 @@ function formatRelativeCompact(from: Date, to: Date): string {
   return future ? `in ${years}y` : `${years}y`;
 }
 
-export default function RelativeTimeBadge({ date, prefix = "Last updated:", className, variant = "outline" }: RelativeTimeBadgeProps) {
+export default function RelativeTimeBadge({ date, prefix = "Last updated: ", className }: RelativeTimeBadgeProps) {
   // Avoid hydration mismatch by rendering placeholder on server and computing on client after mount
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -45,9 +44,9 @@ export default function RelativeTimeBadge({ date, prefix = "Last updated:", clas
   const relative = useMemo(() => (mounted ? formatRelativeCompact(buildDate, new Date()) : "—"), [buildDate, mounted]);
 
   return (
-    <Badge data-slot="relative-time-badge" variant={variant} className={className}>
-      {prefix}{" "}
+    <Badge data-slot="relative-time-badge" className={className}>
       <time dateTime={buildDate.toISOString()} title={absoluteTitle}>
+        {prefix}
         {relative}
       </time>
     </Badge>

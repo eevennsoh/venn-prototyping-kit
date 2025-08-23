@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/ads/ui/button";
 import * as React from "react";
 
 const V0_LOGO_SVG = (

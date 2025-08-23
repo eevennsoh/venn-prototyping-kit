@@ -1,5 +1,5 @@
-import RelativeTimeBadge from "@/components/registry/relative-time-badge";
-import ThemeToggleButton from "@/components/registry/theme-toggle-button";
+import RelativeTimeBadge from "@/components/relative-time-badge";
+import ThemeToggleButton from "@/components/theme-toggle-button";
 
 type PageHeaderProps = {
   title?: string;

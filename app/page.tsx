@@ -1,12 +1,12 @@
 import * as React from "react";
 export const dynamic = "force-static";
 // import Link from "next/link";
-import OpenInV0Button from "@/components/registry/open-in-v0-button";
-import CopyButton from "@/components/registry/copy-button";
-import PageHeader from "@/components/registry/page-header";
+import OpenInV0Button from "@/components/open-in-v0-button";
+import CopyButton from "@/components/copy-button";
+import PageHeader from "@/components/page-header";
 import SetupPage from "@/registry/ads/blocks/setup/setup-page";
 import LogosPage from "@/registry/ads/blocks/logos-page";
-import NavigationPage from "@/registry/ads/blocks/navigation-page";
+import NavigationPage from "@/registry/ads/blocks/navigation/navigation-page";
 import ButtonPage from "@/registry/ads/blocks/button-page";
 import IconsPage from "@/registry/ads/blocks/icons-page";
 import InputPage from "@/registry/ads/blocks/input-page";
@@ -21,9 +21,9 @@ export default function Home() {
       {/* Grid container: 2 columns, full viewport width, single 24px padding */}
       <main className="grid grid-cols-1 gap-6 px-6 py-6 md:grid-cols-2">
         {/* Prototype Setup Kit */}
-        <section className="border-slate-200a relative flex flex-col gap-4 rounded-lg border p-4">
+        <section className="border-border relative flex flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-slate-700">Prototype Setup Kit</h2>
+            <h5 className="text-text-subtle">Prototype Setup Kit</h5>
             <div className="flex items-center gap-2 sm:ml-auto">
               <CopyButton registryName="setup" tooltipText="Copy npx command" />
 
@@ -40,9 +40,9 @@ export default function Home() {
         </section>
 
         {/* Logos */}
-        <section className="border-slate-200a relative flex flex-col gap-4 rounded-lg border p-4">
+        <section className="border-border relative flex flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-slate-700">Logos</h2>
+            <h5 className="text-text-subtle">Logos</h5>
           </div>
           <div className="relative flex flex-1 items-start justify-start">
             <LogosPage />
@@ -50,9 +50,9 @@ export default function Home() {
         </section>
 
         {/* Buttons */}
-        <section className="border-slate-200a relative flex flex-col gap-4 rounded-lg border p-4">
+        <section className="border-border relative flex flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-slate-700">Buttons</h2>
+            <h5 className="text-text-subtle">Buttons</h5>
           </div>
           <div className="relative flex flex-1 items-start justify-start">
             <ButtonPage />
@@ -60,9 +60,9 @@ export default function Home() {
         </section>
 
         {/* Icons */}
-        <section className="border-slate-200a relative flex flex-col gap-4 rounded-lg border p-4">
+        <section className="border-border relative flex flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-slate-700">Icons</h2>
+            <h5 className="text-text-subtle">Icons</h5>
           </div>
           <div className="relative flex flex-1 items-start justify-start">
             <IconsPage />
@@ -70,9 +70,9 @@ export default function Home() {
         </section>
 
         {/* Badges */}
-        <section className="border-slate-200a relative flex flex-col gap-4 rounded-lg border p-4">
+        <section className="border-border relative flex flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-slate-700">Badges</h2>
+            <h5 className="text-text-subtle">Badges</h5>
           </div>
           <div className="relative flex flex-1 items-start justify-start">
             <BadgePage />
@@ -80,9 +80,9 @@ export default function Home() {
         </section>
 
         {/* Inputs */}
-        <section className="border-slate-200a relative flex flex-col gap-4 rounded-lg border p-4">
+        <section className="border-border relative flex flex-col gap-4 rounded-lg border p-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-slate-700">Inputs</h2>
+            <h5 className="text-text-subtle">Inputs</h5>
           </div>
           <div className="relative flex flex-1 items-start justify-start">
             <InputPage />
@@ -90,9 +90,9 @@ export default function Home() {
         </section>
 
         {/* Navigation (span full width on md+) */}
-        <section className="border-slate-200a relative col-span-1 flex flex-col gap-4 rounded-lg border p-4 md:col-span-2">
+        <section className="border-border relative col-span-1 flex flex-col gap-4 rounded-lg border p-4 md:col-span-2">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm text-slate-700">Navigation</h2>
+            <h5 className="text-text-subtle">Navigation</h5>
           </div>
           <div className="relative flex flex-1 items-start justify-start">
             <NavigationPage />

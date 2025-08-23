@@ -4,9 +4,9 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 
 // UI Components
-import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/registry/ads/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ads/ui/tooltip";
+import { Input } from "@/registry/ads/ui/input";
 
 // Icons
 import SidebarCollapseIconCore from "@atlaskit/icon/core/sidebar-collapse";

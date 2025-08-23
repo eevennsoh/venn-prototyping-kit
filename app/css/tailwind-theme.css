@@ -253,6 +253,12 @@
   --tracking-extra-tight: var(--ds-letter-spacing300); /* Custom */
   --tracking-extra-tighter: var(--ds-letter-spacing400); /* Custom */
 
+  /* Font Family Tailwind Tokens */
+  --font-weight-regular: var(--ds-font-weight-regular);
+  --font-weight-medium: var(--ds-font-weight-medium);
+  --font-weight-semibold: var(--ds-font-weight-semibold);
+  --font-weight-bold: var(--ds-font-weight-bold);
+
   /* Motion Easing Tailwind Tokens */
   --ease-in-out: var(--ds-ease-in-out); /* cubic-bezier(0.15, 1, 0.3, 1) */
   --ease-out: var(--ds-ease-out); /* cubic-bezier(0.2, 0, 0, 1) */

@@ -2,8 +2,8 @@
 
 import { useState, useMemo } from "react";
 import * as React from "react";
-import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Button } from "@/registry/ads/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/ads/ui/tooltip";
 import { IconWrapper } from "@/registry/ads/lib/icon-wrapper";
 
 import CopyIconCore from "@atlaskit/icon/core/copy";

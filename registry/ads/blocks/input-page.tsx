@@ -1,6 +1,6 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
+import { Input } from "@/registry/ads/ui/input";
 import { IconWrapper } from "@/registry/ads/lib/icon-wrapper";
 import SearchIconCore from "@atlaskit/icon/core/search";
 
@@ -8,7 +8,7 @@ const SearchIcon = IconWrapper(SearchIconCore);
 
 function InputShowcase() {
   return (
-    <div className="flex h-full flex-col gap-6 p-4">
+    <div className="flex h-full flex-col gap-6">
       {/* Basics */}
       <div className="space-y-4">
         <h3 className="font-semibold">Basics</h3>

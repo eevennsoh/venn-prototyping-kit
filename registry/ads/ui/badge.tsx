@@ -5,17 +5,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center h-6 rounded-md border px-1 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "focus:ring-ring font-body-small inline-flex h-4 items-center rounded-sm border-none px-1 text-(--ds-neutral1000) transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none",
 
   {
     variants: {
       appearance: {
-        default: "bg-(--neutral300) text-text",
-        primary: "bg-background-accent-blue-subtler text-text hover:bg-background-accent-blue-subtler-hovered",
-        primaryInverted: "bg-elevation-surface text-text-brand hover:bg-background-brand-bold-hovered",
-        added: "bg-background-accent-green-subtler text-text-accent-green hover:bg-background-accent-green-subtler-hovered",
-        removed: "bg-background-accent-red-subtler text-text-accent-red hover:bg-background-accent-red-subtler-hovered",
-        important: "bg-background-accent-red-subtle text-text-accent-red hover:bg-background-accent-red-subtle-hovered",
+        default: "bg-(--ds-neutral300)",
+        primary: "bg-(--ds-blue300)",
+        primaryInverted: "bg-elevation-surface text-text-brand",
+        added: "bg-background-success text-text",
+        removed: "bg-background-danger text-text",
+        important: "bg-(--ds-red300)",
       },
     },
     defaultVariants: {
