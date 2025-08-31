@@ -35,17 +35,12 @@ const SettingsIcon = IconWrapper(SettingsIconCore);
 // Create Studio logo component (glyph-only vs full wordmark) using our wrapper
 const Studio = dynamic(() => import("@atlaskit/logo").then((m) => LogoWrapper(m.StudioIcon, m.StudioLogo)), { ssr: false });
 
-type NavigationProps = {
-  className?: string;
-};
-
-export function Navigation({ className }: NavigationProps) {
+function Navigation({ className }: { className?: string }) {
   return (
-    <header className={cn("sticky top-0 z-40 w-full border-b bg-white backdrop-blur", "border-slate-200 dark:border-slate-800 dark:bg-slate-900", className)}>
+    <header className={cn("z-navigation bg-elevation-surface border-border sticky top-0 w-full border-b backdrop-blur", className)}>
       <div className="flex h-12 items-center justify-between px-3 py-2">
-        {/* Left side - Navigation */}
-        <div className="flex min-w-[300px] items-center gap-1">
-          {/* Sidebar toggle button */}
+        {/* Left Section - Navigation Controls */}
+        <div className="flex items-center gap-1">
           <Tooltip>
             <TooltipTrigger asChild>
               <Button appearance="subtle" spacing="icon">
@@ -55,7 +50,6 @@ export function Navigation({ className }: NavigationProps) {
             <TooltipContent>Toggle sidebar</TooltipContent>
           </Tooltip>
 
-          {/* App switcher */}
           <Tooltip>
             <TooltipTrigger asChild>
               <Button appearance="subtle" spacing="icon">
@@ -65,24 +59,18 @@ export function Navigation({ className }: NavigationProps) {
             <TooltipContent>Switch apps</TooltipContent>
           </Tooltip>
 
-          {/* App logo with padding */}
           <div className="flex items-center pl-1">
-            <Link href="/" className="flex items-center gap-1.5 rounded-lg p-1 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Home">
-              <Studio showText={false} />
-              <span className="font-653 dark:text-dark-slate-800 text-slate-900">Studio</span>
+            <Link href="/" className="hover:bg-background-neutral-subtle-hovered flex items-center gap-1.5 rounded-lg p-1 no-underline" aria-label="Home">
+              <Studio size="small" showText={false} />
+              <span className="font-body text-text font-bold">Studio</span>
             </Link>
           </div>
         </div>
 
-        {/* Middle - Search + Create */}
-        <div className="flex min-w-0 flex-1 justify-center px-2">
-          <div className="flex w-full max-w-[560px] items-center gap-2">
-            <form className="relative min-w-0 flex-1" role="search" onSubmit={(e) => e.preventDefault()}>
-              <span className="pointer-events-none absolute inset-y-0 left-2.5 flex items-center">
-                <SearchIcon label="Search" appearance="subtlest" />
-              </span>
-              <Input aria-label="Search" placeholder="Search" className="h-8 pr-3 pl-8" />
-            </form>
+        {/* Center Section - Search & Create */}
+        <div className="flex flex-1 justify-center px-2">
+          <div className="flex w-full max-w-[800px] items-center gap-2">
+            <Input iconBefore={<SearchIcon label="Search" spacing="spacious" appearance="subtlest" />} aria-label="Search" placeholder="Search" size={"compact"} />
             <Button appearance="primary">
               <AddIcon appearance="inverse" label="Create" />
               Create
@@ -90,15 +78,13 @@ export function Navigation({ className }: NavigationProps) {
           </div>
         </div>
 
-        {/* Right side - Actions */}
-        <div className="flex min-w-[300px] items-center justify-end gap-1">
-          {/* Ask Rovo AI button */}
-          <Button appearance="default" className="border-slate-200 dark:border-slate-700">
+        {/* Right Section - User Actions */}
+        <div className="flex items-center justify-end gap-1">
+          <Button appearance="default" className="border-border">
             <RovoChatIcon label="Ask Rovo AI" />
-            Ask Rovo AI
+            Ask Rovo
           </Button>
 
-          {/* Notifications */}
           <Tooltip>
             <TooltipTrigger asChild>
               <Button appearance="subtle" spacing="icon">
@@ -108,7 +94,6 @@ export function Navigation({ className }: NavigationProps) {
             <TooltipContent>Notifications</TooltipContent>
           </Tooltip>
 
-          {/* Help */}
           <Tooltip>
             <TooltipTrigger asChild>
               <Button appearance="subtle" spacing="icon">
@@ -118,7 +103,6 @@ export function Navigation({ className }: NavigationProps) {
             <TooltipContent>Help</TooltipContent>
           </Tooltip>
 
-          {/* Settings */}
           <Tooltip>
             <TooltipTrigger asChild>
               <Button appearance="subtle" spacing="icon">
@@ -128,11 +112,10 @@ export function Navigation({ className }: NavigationProps) {
             <TooltipContent>Settings</TooltipContent>
           </Tooltip>
 
-          {/* Profile avatar */}
           <Tooltip>
             <TooltipTrigger asChild>
               <Button appearance="subtle" spacing="icon" className="rounded-full">
-                <div className="h-6 w-6 rounded-full bg-slate-300 bg-[url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face')] bg-cover bg-center dark:bg-slate-600" />
+                <div className="bg-background-neutral-subtle h-6 w-6 rounded-full bg-[url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face')] bg-cover bg-center" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>Profile</TooltipContent>

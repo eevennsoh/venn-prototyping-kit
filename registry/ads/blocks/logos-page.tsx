@@ -9,10 +9,10 @@ const Jira = dynamic(() => import("@atlaskit/logo").then((m) => LogoWrapper(m.Ji
 
 function LogoShowcase() {
   return (
-    <div className="flex h-full flex-col gap-6">
+    <div className="flex h-full w-full flex-col gap-6">
       {/* Appearance */}
       <div className="space-y-4">
-        <h3>Appearance</h3>
+        <h6>Appearance</h6>
         <div className="flex flex-wrap items-center gap-4">
           <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
             <Jira appearance="brand" />
@@ -31,7 +31,7 @@ function LogoShowcase() {
 
       {/* With/Without Text */}
       <div className="space-y-4">
-        <h3>With/Without Text</h3>
+        <h6>With/Without Text</h6>
         <div className="flex flex-col items-start gap-4">
           <div className="flex flex-col items-start gap-1">
             <Jira showText={false} />
@@ -44,8 +44,9 @@ function LogoShowcase() {
         </div>
       </div>
 
+      {/* Size */}
       <div className="space-y-4">
-        <h3>Sizes</h3>
+        <h6>Size</h6>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col items-start gap-1">
             <Confluence size="xxsmall" />
@@ -79,7 +80,7 @@ function LogoShowcase() {
 
 export default function LogosPage() {
   return (
-    <div className="flex h-full items-start justify-start">
+    <div className="flex h-full w-full items-start justify-start">
       <LogoShowcase />
     </div>
   );

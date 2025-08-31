@@ -5,8 +5,21 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "focus:ring-ring font-body-small inline-flex h-4 items-center rounded-sm border-none px-1 text-(--ds-neutral1000) transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none",
+  // Common Base Styles
+  [
+    // Typography & Layout
+    "font-body-small inline-flex h-4 items-center rounded-sm",
+    "px-1 text-(--ds-neutral1000)",
 
+    // Interactive States
+    "transition-colors",
+
+    // Focus Management
+    "focus-visible:outline-border-focused focus-visible:outline-2 focus-visible:outline-offset-2",
+
+    // Border
+    "border-none",
+  ].join(" "),
   {
     variants: {
       appearance: {
@@ -24,17 +37,22 @@ const badgeVariants = cva(
   },
 );
 
-interface BadgeProps extends React.ComponentProps<"span">, VariantProps<typeof badgeVariants> {
-  asChild?: boolean;
-  /** Visual style of the badge - maps to ADS appearance prop */
-  appearance?: "default" | "primary" | "primaryInverted" | "added" | "removed" | "important";
-  /** Maximum value before showing '+' (for count badges) */
-  max?: number;
-  /** Number to display (for count badges) */
-  value?: number;
-}
-
-function Badge({ className, appearance = "default", asChild = false, max, value, children, ...props }: BadgeProps) {
+function Badge({
+  className,
+  appearance = "default",
+  asChild = false,
+  max,
+  value,
+  children,
+  ...props
+}: React.ComponentProps<"span"> &
+  VariantProps<typeof badgeVariants> & {
+    asChild?: boolean;
+    /* Maximum value before showing '+' (for count badges) */
+    max?: number;
+    /* Number to display (for count badges) */
+    value?: number;
+  }) {
   const Comp = asChild ? Slot : "span";
 
   // Handle count badge logic

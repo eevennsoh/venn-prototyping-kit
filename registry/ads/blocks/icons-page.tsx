@@ -3,25 +3,15 @@
 import { IconWrapper } from "@/registry/ads/lib/icon-wrapper";
 
 import AddIconCore from "@atlaskit/icon/core/add";
-import AppSwitcherIconCore from "@atlaskit/icon/core/app-switcher";
-import SearchIconCore from "@atlaskit/icon/core/search";
-import NotificationIconCore from "@atlaskit/icon/core/notification";
-import QuestionCircleIconCore from "@atlaskit/icon/core/question-circle";
-import SettingsIconCore from "@atlaskit/icon/core/settings";
 
 const AddIcon = IconWrapper(AddIconCore);
-const AppSwitcherIcon = IconWrapper(AppSwitcherIconCore);
-const SearchIcon = IconWrapper(SearchIconCore);
-const NotificationIcon = IconWrapper(NotificationIconCore);
-const QuestionCircleIcon = IconWrapper(QuestionCircleIconCore);
-const SettingsIcon = IconWrapper(SettingsIconCore);
 
 function IconsShowcase() {
   return (
-    <div className="flex h-full flex-col gap-6">
+    <div className="flex h-full w-full flex-col gap-6">
       {/* Appearance */}
       <div className="space-y-4">
-        <h3>Appearance</h3>
+        <h6>Appearance</h6>
         <div className="flex flex-wrap items-center gap-4">
           <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
             <AddIcon appearance="default" label="Add" />
@@ -42,17 +32,42 @@ function IconsShowcase() {
         </div>
       </div>
 
-      {/* Sizes */}
+      {/* Size */}
       <div className="space-y-4">
-        <h3>Sizes</h3>
-        <div className="flex flex-wrap items-center gap-4">
+        <h6>Size</h6>
+        <div className="flex flex-wrap items-start gap-4">
           <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
-            <SearchIcon size="medium" label="Search" />
-            <span className="font-body-small text-text-subtlest">medium (16px)</span>
+            <AddIcon size="small" label="Search" />
+            <span className="font-body-small text-text-subtlest">small (12px)</span>
           </div>
           <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
-            <SearchIcon size="small" label="Search" />
-            <span className="font-body-small text-text-subtlest">small (12px)</span>
+            <AddIcon size="medium" label="Search" />
+            <span className="font-body-small text-text-subtlest">medium (16px)</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Spacing */}
+      <div className="space-y-4">
+        <h6>Spacing</h6>
+        <div className="flex flex-wrap items-start gap-4">
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
+            <AddIcon size="small" label="Search" />
+            <span className="font-body-small text-text-subtlest">default (12px)</span>
+          </div>
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
+            <AddIcon size="small" spacing="spacious" label="Search" />
+            <span className="font-body-small text-text-subtlest">spacious (12px)</span>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-start gap-4">
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
+            <AddIcon size="medium" label="Search" />
+            <span className="font-body-small text-text-subtlest">default (16px)</span>
+          </div>
+          <div className="border-border flex flex-col items-start gap-1 rounded-sm border p-2">
+            <AddIcon size="medium" spacing="spacious" label="Search" />
+            <span className="font-body-small text-text-subtlest">spacious (16px)</span>
           </div>
         </div>
       </div>
@@ -62,7 +77,7 @@ function IconsShowcase() {
 
 export default function IconsPage() {
   return (
-    <div className="flex h-full items-start justify-start">
+    <div className="flex h-full w-full items-start justify-start">
       <IconsShowcase />
     </div>
   );

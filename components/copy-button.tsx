@@ -47,7 +47,7 @@ export default function CopyButton({ textToCopy, registryName, tooltipText = "Co
           {copied ? <CheckMarkIcon size="small" label="Copied" /> : <CopyIcon size="small" label="Copy" />}
         </Button>
       </TooltipTrigger>
-      <TooltipContent className="font-mono">{tooltipText}</TooltipContent>
+      <TooltipContent className="font-code">{tooltipText}</TooltipContent>
     </Tooltip>
   );
 }

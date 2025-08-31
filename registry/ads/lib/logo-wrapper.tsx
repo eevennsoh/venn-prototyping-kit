@@ -29,18 +29,14 @@ const logoVariants = cva("inline-flex items-center", {
   },
 });
 
-interface LogoWrapperProps extends VariantProps<typeof logoVariants> {
-  showText?: boolean;
-}
-
-interface AtlaskitLogoProps {
+type AtlaskitLogoProps = {
   appearance?: LogoAppearance;
   shouldUseNewLogoDesign?: boolean;
   size?: LogoSize;
-}
+};
 
 export function LogoWrapper(IconComponent: ComponentType<AtlaskitLogoProps>, LogoComponent: ComponentType<AtlaskitLogoProps>) {
-  return function WrappedLogo({ size, appearance, showText = true, ...logoProps }: LogoWrapperProps & AtlaskitLogoProps) {
+  return function WrappedLogo({ size, appearance, showText = true, ...logoProps }: VariantProps<typeof logoVariants> & { showText?: boolean } & AtlaskitLogoProps) {
     const sharedProps: AtlaskitLogoProps = {
       shouldUseNewLogoDesign: true,
       size: (size as LogoSize) ?? "medium",

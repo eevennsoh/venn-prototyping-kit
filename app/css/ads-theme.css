@@ -1033,4 +1033,15 @@
   /* Skeleton Tokens */
   --skeleton: var(--ds-darkneutral200a);
   --skeleton-subtle: var(--ds-darkneutral100a);
+
+  /* Z-Index Tokens */
+  --z-card: var(--ds-z100);
+  --z-navigation: var(--ds-z200);
+  --z-dialog: var(--ds-z300);
+  --z-layer: var(--ds-z400);
+  --z-blanket: var(--ds-z500);
+  --z-modal: var(--ds-z510);
+  --z-flag: var(--ds-z600);
+  --z-spotlight: var(--ds-z700);
+  --z-tooltip: var(--ds-z800);
 }
